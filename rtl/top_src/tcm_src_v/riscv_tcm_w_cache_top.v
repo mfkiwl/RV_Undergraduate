@@ -359,10 +359,10 @@ u_icache
 
         
     // Outputs
-    ,.req_accept_o(icache_accept_w)
-    ,.req_valid_o(icache_valid_w)
-    ,.req_error_o(icache_error_w)
-    ,.req_inst_o(icache_inst_w)
+    ,.req_accept_o  (icache_accept_w    )
+    ,.req_valid_o   (icache_valid_w     )
+    ,.req_error_o   (icache_error_w     )
+    ,.req_inst_o    (icache_inst_w      )
 
     // AXI OUTPUT
     ,.axi_awvalid_o (AXI_c_awvalid      )
@@ -393,20 +393,20 @@ u_tcm
      .clk_i(clk_i)
     ,.rst_i(rst_i)
 
-    // interface from core
-    ,.mem_i_rd_i(ifetch_rd_w)
-    ,.mem_i_flush_i(ifetch_flush_w)
-    ,.mem_i_invalidate_i(ifetch_invalidate_w)
-    ,.mem_i_pc_i(ifetch_pc_w)
-    ,.mem_d_addr_i(dport_tcm_addr_w)
-    ,.mem_d_data_wr_i(dport_tcm_data_wr_w)
-    ,.mem_d_rd_i(dport_tcm_rd_w)
-    ,.mem_d_wr_i(dport_tcm_wr_w)
-    ,.mem_d_cacheable_i(dport_tcm_cacheable_w)
-    ,.mem_d_req_tag_i(dport_tcm_req_tag_w)
-    ,.mem_d_invalidate_i(dport_tcm_invalidate_w)
-    ,.mem_d_writeback_i(dport_tcm_writeback_w)
-    ,.mem_d_flush_i(dport_tcm_flush_w)
+    // // interface from core
+    // ,.mem_i_rd_i(ifetch_rd_w)
+    // ,.mem_i_flush_i(ifetch_flush_w)
+    // ,.mem_i_invalidate_i(ifetch_invalidate_w)
+    // ,.mem_i_pc_i(ifetch_pc_w)
+    // ,.mem_d_addr_i(dport_tcm_addr_w)
+    // ,.mem_d_data_wr_i(dport_tcm_data_wr_w)
+    // ,.mem_d_rd_i(dport_tcm_rd_w)
+    // ,.mem_d_wr_i(dport_tcm_wr_w)
+    // ,.mem_d_cacheable_i(dport_tcm_cacheable_w)
+    // ,.mem_d_req_tag_i(dport_tcm_req_tag_w)
+    // ,.mem_d_invalidate_i(dport_tcm_invalidate_w)
+    // ,.mem_d_writeback_i(dport_tcm_writeback_w)
+    // ,.mem_d_flush_i(dport_tcm_flush_w)
 
 
     // AXI INTERFACE INPUT
@@ -458,6 +458,7 @@ u_tcm
     ,.tb_inst_addr_i  (tb_inst_addr_i  )
     ,.tb_inst_data_i  (tb_inst_data_i  )    
 );
+
 
 
 

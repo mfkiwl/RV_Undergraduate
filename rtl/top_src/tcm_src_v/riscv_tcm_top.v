@@ -229,11 +229,13 @@ u_dmux
     ,.mem_invalidate_i(dport_invalidate_w)
     ,.mem_writeback_i(dport_writeback_w)
     ,.mem_flush_i(dport_flush_w)
+
     ,.mem_tcm_data_rd_i(dport_tcm_data_rd_w)
     ,.mem_tcm_accept_i(dport_tcm_accept_w)
     ,.mem_tcm_ack_i(dport_tcm_ack_w)
     ,.mem_tcm_error_i(dport_tcm_error_w)
     ,.mem_tcm_resp_tag_i(dport_tcm_resp_tag_w)
+
     ,.mem_ext_data_rd_i(dport_axi_data_rd_w)
     ,.mem_ext_accept_i(dport_axi_accept_w)
     ,.mem_ext_ack_i(dport_axi_ack_w)
@@ -246,6 +248,7 @@ u_dmux
     ,.mem_ack_o(dport_ack_w)
     ,.mem_error_o(dport_error_w)
     ,.mem_resp_tag_o(dport_resp_tag_w)
+
     ,.mem_tcm_addr_o(dport_tcm_addr_w)
     ,.mem_tcm_data_wr_o(dport_tcm_data_wr_w)
     ,.mem_tcm_rd_o(dport_tcm_rd_w)
@@ -255,6 +258,7 @@ u_dmux
     ,.mem_tcm_invalidate_o(dport_tcm_invalidate_w)
     ,.mem_tcm_writeback_o(dport_tcm_writeback_w)
     ,.mem_tcm_flush_o(dport_tcm_flush_w)
+    
     ,.mem_ext_addr_o(dport_axi_addr_w)
     ,.mem_ext_data_wr_o(dport_axi_data_wr_w)
     ,.mem_ext_rd_o(dport_axi_rd_w)

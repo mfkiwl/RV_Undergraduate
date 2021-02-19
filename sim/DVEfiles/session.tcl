@@ -1,25 +1,24 @@
 # Begin_DVE_Session_Save_Info
-# DVE reload session
-# Saved on Fri Feb 19 18:27:34 2021
+# DVE full session
+# Saved on Fri Feb 19 21:08:33 2021
 # Designs open: 1
 #   V1: /home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd
-# Toplevel windows open: 2
-# 	TopLevel.1
+# Toplevel windows open: 1
 # 	TopLevel.2
-#   Source.1: dport_axi
-#   Wave.1: 37 signals
-#   Group count = 2
-#   Group Group1 signal count = 12
+#   Wave.1: 36 signals
+#   Group count = 3
+#   Group Group1 signal count = 6
 #   Group Group2 signal count = 26
+#   Group Group3 signal count = 5
 # End_DVE_Session_Save_Info
 
 # DVE version: K-2015.09-SP1_Full64
 # DVE build date: Nov 24 2015 21:15:24
 
 
-#<Session mode="Reload" path="/home/uho/workspace/RISCV_RTL_SIM/sim/DVEfiles/session.tcl" type="Debug">
+#<Session mode="Full" path="/home/uho/workspace/RISCV_RTL_SIM/sim/DVEfiles/session.tcl" type="Debug">
 
-gui_set_loading_session_type Reload
+gui_set_loading_session_type Post
 gui_continuetime_set
 
 # Close design
@@ -28,8 +27,30 @@ if { [gui_sim_state -check active] } {
 }
 gui_close_db -all
 gui_expr_clear_all
-gui_clear_window -type Wave
-gui_clear_window -type List
+
+# Close all windows
+gui_close_window -type Console
+gui_close_window -type Wave
+gui_close_window -type Source
+gui_close_window -type Schematic
+gui_close_window -type Data
+gui_close_window -type DriverLoad
+gui_close_window -type List
+gui_close_window -type Memory
+gui_close_window -type HSPane
+gui_close_window -type DLPane
+gui_close_window -type Assertion
+gui_close_window -type CovHier
+gui_close_window -type CoverageTable
+gui_close_window -type CoverageMap
+gui_close_window -type CovDetail
+gui_close_window -type Local
+gui_close_window -type Stack
+gui_close_window -type Watch
+gui_close_window -type Group
+gui_close_window -type Transaction
+
+
 
 # Application preferences
 gui_set_pref_value -key app_default_font -value {Helvetica,10,-1,5,50,0,0,0,0,0}
@@ -39,38 +60,74 @@ gui_src_preferences -tabstop 8 -maxbits 24 -windownumber 1
 # DVE top-level session
 
 
-# Create and position top-level window: TopLevel.1
-
-set TopLevel.1 TopLevel.1
-
-# Docked window settings
-set HSPane.1 HSPane.1
-set Hier.1 Hier.1
-set DLPane.1 DLPane.1
-set Data.1 Data.1
-set Console.1 Console.1
-gui_sync_global -id ${TopLevel.1} -option true
-
-# MDI window settings
-set Source.1 Source.1
-gui_update_layout -id ${Source.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false}}
-
-# End MDI window settings
-
-
 # Create and position top-level window: TopLevel.2
 
-set TopLevel.2 TopLevel.2
+if {![gui_exist_window -window TopLevel.2]} {
+    set TopLevel.2 [ gui_create_window -type TopLevel \
+       -icon $::env(DVE)/auxx/gui/images/toolbars/dvewin.xpm] 
+} else { 
+    set TopLevel.2 TopLevel.2
+}
+gui_show_window -window ${TopLevel.2} -show_state maximized -rect {{64 546} {1919 1602}}
+
+# ToolBar settings
+gui_set_toolbar_attributes -toolbar {TimeOperations} -dock_state top
+gui_set_toolbar_attributes -toolbar {TimeOperations} -offset 0
+gui_show_toolbar -toolbar {TimeOperations}
+gui_hide_toolbar -toolbar {&File}
+gui_set_toolbar_attributes -toolbar {&Edit} -dock_state top
+gui_set_toolbar_attributes -toolbar {&Edit} -offset 0
+gui_show_toolbar -toolbar {&Edit}
+gui_hide_toolbar -toolbar {CopyPaste}
+gui_set_toolbar_attributes -toolbar {&Trace} -dock_state top
+gui_set_toolbar_attributes -toolbar {&Trace} -offset 0
+gui_show_toolbar -toolbar {&Trace}
+gui_hide_toolbar -toolbar {TraceInstance}
+gui_hide_toolbar -toolbar {BackTrace}
+gui_set_toolbar_attributes -toolbar {&Scope} -dock_state top
+gui_set_toolbar_attributes -toolbar {&Scope} -offset 0
+gui_show_toolbar -toolbar {&Scope}
+gui_set_toolbar_attributes -toolbar {&Window} -dock_state top
+gui_set_toolbar_attributes -toolbar {&Window} -offset 0
+gui_show_toolbar -toolbar {&Window}
+gui_set_toolbar_attributes -toolbar {Signal} -dock_state top
+gui_set_toolbar_attributes -toolbar {Signal} -offset 0
+gui_show_toolbar -toolbar {Signal}
+gui_set_toolbar_attributes -toolbar {Zoom} -dock_state top
+gui_set_toolbar_attributes -toolbar {Zoom} -offset 0
+gui_show_toolbar -toolbar {Zoom}
+gui_set_toolbar_attributes -toolbar {Zoom And Pan History} -dock_state top
+gui_set_toolbar_attributes -toolbar {Zoom And Pan History} -offset 0
+gui_show_toolbar -toolbar {Zoom And Pan History}
+gui_set_toolbar_attributes -toolbar {Grid} -dock_state top
+gui_set_toolbar_attributes -toolbar {Grid} -offset 0
+gui_show_toolbar -toolbar {Grid}
+gui_hide_toolbar -toolbar {Simulator}
+gui_hide_toolbar -toolbar {Interactive Rewind}
+gui_set_toolbar_attributes -toolbar {Testbench} -dock_state top
+gui_set_toolbar_attributes -toolbar {Testbench} -offset 0
+gui_show_toolbar -toolbar {Testbench}
+
+# End ToolBar settings
 
 # Docked window settings
 gui_sync_global -id ${TopLevel.2} -option true
 
 # MDI window settings
-set Wave.1 Wave.1
+set Wave.1 [gui_create_window -type {Wave}  -parent ${TopLevel.2}]
+gui_show_window -window ${Wave.1} -show_state maximized
 gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 538} {child_wave_right 1312} {child_wave_colname 267} {child_wave_colvalue 267} {child_wave_col1 0} {child_wave_col2 1}}
 
 # End MDI window settings
 
+gui_set_env TOPLEVELS::TARGET_FRAME(Source) none
+gui_set_env TOPLEVELS::TARGET_FRAME(Schematic) none
+gui_set_env TOPLEVELS::TARGET_FRAME(PathSchematic) none
+gui_set_env TOPLEVELS::TARGET_FRAME(Wave) none
+gui_set_env TOPLEVELS::TARGET_FRAME(List) none
+gui_set_env TOPLEVELS::TARGET_FRAME(Memory) none
+gui_set_env TOPLEVELS::TARGET_FRAME(DriverLoad) none
+gui_update_statusbar_target_frame ${TopLevel.2}
 
 #</WindowLayout>
 
@@ -97,22 +154,29 @@ gui_set_time_units 10ps
 # Global: Signal Compare
 
 # Global: Signal Groups
-gui_load_child_values {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.u_ram}
+gui_load_child_values {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache}
+gui_load_child_values {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm_i}
 
 
-set _session_group_4 Group1
-gui_sg_create "$_session_group_4"
-set Group1 "$_session_group_4"
+set _session_group_13 Group1
+gui_sg_create "$_session_group_13"
+set Group1 "$_session_group_13"
 
-gui_sg_addsignal -group "$_session_group_4" { }
-gui_sg_addsignal -group "$_session_group_4" { Divider } -divider
-gui_sg_addsignal -group "$_session_group_4" { tb_tcm_riscv_top.UUT_RISCV_SOC.tb_inst_we_i tb_tcm_riscv_top.UUT_RISCV_SOC.tb_inst_addr_i tb_tcm_riscv_top.UUT_RISCV_SOC.tb_inst_data_i tb_tcm_riscv_top.UUT_RISCV_SOC.ifetch_inst_w tb_tcm_riscv_top.UUT_RISCV_SOC.icache_inst_w tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.u_ram.clk0_i tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.u_ram.rst0_i tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.u_ram.addr0_i tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.u_ram.data0_i tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.u_ram.wr0_i tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.u_ram.wr0_i }
+gui_sg_addsignal -group "$_session_group_13" { }
+gui_sg_addsignal -group "$_session_group_13" { Divider } -divider
+gui_sg_addsignal -group "$_session_group_13" { tb_tcm_riscv_top.UUT_RISCV_SOC.tb_inst_we_i tb_tcm_riscv_top.UUT_RISCV_SOC.tb_inst_addr_i tb_tcm_riscv_top.UUT_RISCV_SOC.tb_inst_data_i tb_tcm_riscv_top.UUT_RISCV_SOC.ifetch_inst_w tb_tcm_riscv_top.UUT_RISCV_SOC.icache_inst_w }
 
-set _session_group_5 Group2
-gui_sg_create "$_session_group_5"
-set Group2 "$_session_group_5"
+set _session_group_14 Group2
+gui_sg_create "$_session_group_14"
+set Group2 "$_session_group_14"
 
-gui_sg_addsignal -group "$_session_group_5" { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.clk_i tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.rst_i tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.req_pc_i tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.next_state_r tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.state_q tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag_addr_r tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag_data_in_r tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag0_write_r tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag0_data_out_w tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag0_valid_w tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag0_addr_bits_w tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag0_hit_w tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag1_write_r tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag1_data_out_w tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag1_valid_w tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag1_addr_bits_w tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag1_hit_w tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag_hit_any_w tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.data_addr_r tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.data_write_addr_q tb_tcm_riscv_top.UUT_RISCV_SOC.rst_cpu_i tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.inst_r tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.u_core.mem_data_rd_o tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.u_core.mem_accept_o tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.u_core.mem_ack_o tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.u_core.mem_error_o }
+gui_sg_addsignal -group "$_session_group_14" { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.clk_i tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.rst_i tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.req_pc_i tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.next_state_r tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.state_q tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag_addr_r tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag_data_in_r tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag0_write_r tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag0_data_out_w tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag0_valid_w tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag0_addr_bits_w tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag0_hit_w tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag1_write_r tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag1_data_out_w tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag1_valid_w tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag1_addr_bits_w tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag1_hit_w tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag_hit_any_w tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.data_addr_r tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.data_write_addr_q tb_tcm_riscv_top.UUT_RISCV_SOC.rst_cpu_i tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.inst_r tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.u_core.mem_data_rd_o tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.u_core.mem_accept_o tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.u_core.mem_ack_o tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.u_core.mem_error_o }
+
+set _session_group_15 Group3
+gui_sg_create "$_session_group_15"
+set Group3 "$_session_group_15"
+
+gui_sg_addsignal -group "$_session_group_15" { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_i_pc_o tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.reset_vector_i tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.rst_i tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_i_inst_i tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm_i.axi_araddr_i }
 
 # Global: Highlighting
 gui_highlight_signals -color #00ff00 {tb_tcm_riscv_top.UUT_RISCV_SOC.rst_cpu_i}
@@ -124,7 +188,7 @@ gui_change_stack_mode -mode list
 # Post database loading setting...
 
 # Restore C1 time
-gui_set_time -C1_only 251514
+gui_set_time -C1_only 277000
 
 
 
@@ -143,36 +207,6 @@ gui_set_loading_session_type noSession
 # DVE View/pane content session: 
 
 
-# Hier 'Hier.1'
-gui_show_window -window ${Hier.1}
-gui_list_set_filter -id ${Hier.1} -list { {Package 1} {All 0} {Process 1} {VirtPowSwitch 0} {UnnamedProcess 1} {UDP 0} {Function 1} {Block 1} {SrsnAndSpaCell 0} {OVA Unit 1} {LeafScCell 1} {LeafVlgCell 1} {Interface 1} {LeafVhdCell 1} {$unit 1} {NamedBlock 1} {Task 1} {VlgPackage 1} {ClassDef 1} {VirtIsoCell 0} }
-gui_list_set_filter -id ${Hier.1} -text {*} -force
-gui_change_design -id ${Hier.1} -design V1
-catch {gui_list_expand -id ${Hier.1} tb_tcm_riscv_top}
-catch {gui_list_expand -id ${Hier.1} tb_tcm_riscv_top.UUT_RISCV_SOC}
-catch {gui_list_expand -id ${Hier.1} tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache}
-catch {gui_list_select -id ${Hier.1} {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.u_core}}
-gui_view_scroll -id ${Hier.1} -vertical -set 0
-gui_view_scroll -id ${Hier.1} -horizontal -set 0
-
-# Data 'Data.1'
-gui_list_set_filter -id ${Data.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {LowPower 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
-gui_list_set_filter -id ${Data.1} -text {*mem_*}
-gui_list_show_data -id ${Data.1} {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.u_core}
-gui_show_window -window ${Data.1}
-catch { gui_list_select -id ${Data.1} {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.u_core.mem_data_rd_o tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.u_core.mem_accept_o tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.u_core.mem_ack_o tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.u_core.mem_error_o }}
-gui_view_scroll -id ${Data.1} -vertical -set 0
-gui_view_scroll -id ${Data.1} -horizontal -set 0
-gui_view_scroll -id ${Hier.1} -vertical -set 0
-gui_view_scroll -id ${Hier.1} -horizontal -set 0
-
-# Source 'Source.1'
-gui_src_value_annotate -id ${Source.1} -switch false
-gui_set_env TOGGLE::VALUEANNOTATE 0
-gui_open_source -id ${Source.1}  -replace -active dport_axi /home/uho/workspace/RISCV_RTL_SIM/sim/../rtl/top_src/tcm_src_v/dport_axi.v
-gui_view_scroll -id ${Source.1} -vertical -set 660
-gui_src_set_reusable -id ${Source.1}
-
 # View 'Wave.1'
 gui_wv_sync -id ${Wave.1} -switch false
 set groupExD [gui_get_pref_value -category Wave -key exclusiveSG]
@@ -181,10 +215,12 @@ set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
 gui_list_set_height -id Wave -height 25
 set origGroupCreationState [gui_list_create_group_when_add -wave]
 gui_list_create_group_when_add -wave -disable
-gui_wv_zoom_timerange -id ${Wave.1} 0 880641
+gui_marker_set_ref -id ${Wave.1}  C1
+gui_wv_zoom_timerange -id ${Wave.1} 267627 295148
 gui_list_add_group -id ${Wave.1} -after {New Group} {Group1}
 gui_list_add_group -id ${Wave.1} -after {New Group} {Group2}
-gui_list_select -id ${Wave.1} {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.inst_r }
+gui_list_add_group -id ${Wave.1} -after {New Group} {Group3}
+gui_list_select -id ${Wave.1} {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm_i.axi_araddr_i }
 gui_seek_criteria -id ${Wave.1} {Any Edge}
 
 
@@ -199,10 +235,10 @@ if { $groupExD } {
  gui_msg_report -code DVWW028
 }
 gui_list_set_filter -id ${Wave.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
-gui_list_set_filter -id ${Wave.1} -reset
-gui_list_set_insertion_bar  -id ${Wave.1} -group Group2  -item {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.inst_r[31:0]} -position below
+gui_list_set_filter -id ${Wave.1} -text {*}
+gui_list_set_insertion_bar  -id ${Wave.1} -group Group3  -position in
 
-gui_marker_move -id ${Wave.1} {C1} 251514
+gui_marker_move -id ${Wave.1} {C1} 277000
 gui_view_scroll -id ${Wave.1} -vertical -set 153
 gui_show_grid -id ${Wave.1} -enable false
 # Restore toplevel window zorder
@@ -210,11 +246,6 @@ gui_show_grid -id ${Wave.1} -enable false
 if {[gui_exist_window -window ${TopLevel.2}]} {
 	gui_set_active_window -window ${TopLevel.2}
 	gui_set_active_window -window ${Wave.1}
-}
-if {[gui_exist_window -window ${TopLevel.1}]} {
-	gui_set_active_window -window ${TopLevel.1}
-	gui_set_active_window -window ${Source.1}
-	gui_set_active_window -window ${DLPane.1}
 }
 #</Session>
 

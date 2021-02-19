@@ -1,0 +1,54 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "riscv_csr": {},
+        "std": {},
+        "riscv_fetch": {},
+        "riscv_divider": {},
+        "riscv_trace_sim": {},
+        "dport_axi": {},
+        "tb_tcm_riscv_top": {
+            "Compiled": "Yes",
+            "Compiled Times": 3
+        },
+        "dcache_core_data_ram": {},
+        "icache": {},
+        "riscv_core": {},
+        "riscv_decode_0000": {},
+        "riscv_lsu": {},
+        "riscv_mmu_0000": {},
+        "riscv_multiplier": {},
+        "dport_mux": {},
+        "tcm_mem": {}
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "objs/amcQw_d.o",
+            "bytes": 8601,
+            "mode": 4,
+            "checksum": 4294967295
+        },
+        "cvb2u_d": {
+            "mod": "tb_tcm_riscv_top",
+            "out": "cvb2u_d.o",
+            "bytes": 299050,
+            "archive": "archive.37/_30898_archive_1.a",
+            "mode": 4,
+            "checksum": 4294967295
+        }
+    },
+    "reusePaths": {},
+    "ObjArchives": [
+        {
+            "archive": "archive.37/_30898_archive_1.a",
+            "objects": [
+                [
+                    "cvb2u_d.o",
+                    299050
+                ]
+            ],
+            "size": 299050
+        }
+    ]
+}

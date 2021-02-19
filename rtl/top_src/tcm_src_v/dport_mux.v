@@ -47,7 +47,10 @@ module dport_mux
 // Params
 //-----------------------------------------------------------------
 #(
-     parameter TCM_MEM_BASE     = 0
+    //  parameter TCM_MEM_BASE     = 0
+     parameter TCM_MEM_BASE     = 32'h00010000
+    // parameter not working for an addtion operation
+    //  parameter TCM_MEM_CAPACITY = 32'h00010000
 )
 //-----------------------------------------------------------------
 // Ports
@@ -110,7 +113,8 @@ module dport_mux
 wire hold_w;
 
 /* verilator lint_off UNSIGNED */
-wire tcm_access_w = (mem_addr_i >= TCM_MEM_BASE && mem_addr_i < (TCM_MEM_BASE + 32'd65536));
+wire tcm_access_w = (mem_addr_i >= TCM_MEM_BASE && mem_addr_i < (TCM_MEM_BASE + 32'h00010000));
+// wire tcm_access_w = (mem_addr_i >= TCM_MEM_BASE && mem_addr_i < (TCM_MEM_BASE + 32'd65536));
 /* verilator lint_on UNSIGNED */
 
 reg       tcm_access_q;

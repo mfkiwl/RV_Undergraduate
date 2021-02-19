@@ -71,7 +71,7 @@
 ../rtl/top_src/core/riscv_xilinx_2r1w.v
 ../rtl/top_src/tcm_src_v/dport_axi.v
 ../rtl/top_src/tcm_src_v/dport_mux.v
-../rtl/top_src/tcm_src_v/riscv_tcm_w_cache_top.v
+../rtl/top_src/tcm_src_v/riscv_decoupled_tcm.v
 ../rtl/top_src/tcm_src_v/tcm_mem.v
 ../rtl/top_src/tcm_src_v/tcm_mem_pmem.v
 ../rtl/top_src/tcm_src_v/tcm_mem_ram.v
@@ -116,11 +116,11 @@ ARMLMD_LICENSE_FILE=27001@163.152.176.216
 0
 38
 1613395929 ../rtl/top_src/core/riscv_defs.v
-1613723149 ../rtl/top_src/tcm_src_v/riscv_tcm_w_cache_top.v
+1613736430 ../rtl/top_src/tcm_src_v/riscv_decoupled_tcm.v
 1613700089 ../rtl/top_src/tcm_src_v/tcm_mem.v
 1612410201 ../rtl/top_src/tcm_src_v/tcm_mem_ram.v
 1612410201 ../rtl/top_src/tcm_src_v/tcm_mem_pmem.v
-1612410201 ../rtl/top_src/tcm_src_v/dport_mux.v
+1613735234 ../rtl/top_src/tcm_src_v/dport_mux.v
 1612410201 ../rtl/top_src/tcm_src_v/dport_axi.v
 1612403128 ../rtl/top_src/core/riscv_xilinx_2r1w.v
 1612403128 ../rtl/top_src/core/riscv_trace_sim.v
