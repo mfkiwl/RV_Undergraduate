@@ -1,0 +1,87 @@
+{
+    "riscv_csr": [
+        "riscv_csr",
+        "TEvF4",
+        "module"
+    ],
+    "std": [
+        "std",
+        "reYIK",
+        "module"
+    ],
+    "tcm_mem": [
+        "tcm_mem",
+        "DBb1S",
+        "module"
+    ],
+    "tb_tcm_riscv_top": [
+        "tb_tcm_riscv_top",
+        "cvb2u",
+        "module"
+    ],
+    "riscv_divider": [
+        "riscv_divider",
+        "CJAps",
+        "module"
+    ],
+    "riscv_multiplier": [
+        "riscv_multiplier",
+        "FBcGz",
+        "module"
+    ],
+    "dcache_core_data_ram": [
+        "dcache_core_data_ram",
+        "fDyH7",
+        "module"
+    ],
+    "riscv_core": [
+        "riscv_core",
+        "yiGEQ",
+        "module"
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module"
+    ],
+    "icache": [
+        "icache",
+        "sbRVE",
+        "module"
+    ],
+    "riscv_decode_0000": [
+        "riscv_decode_0000",
+        "Y6SGY",
+        "module"
+    ],
+    "dport_axi": [
+        "dport_axi",
+        "Mvsdu",
+        "module"
+    ],
+    "riscv_fetch": [
+        "riscv_fetch",
+        "ucxdY",
+        "module"
+    ],
+    "riscv_trace_sim": [
+        "riscv_trace_sim",
+        "Qacj7",
+        "module"
+    ],
+    "riscv_lsu": [
+        "riscv_lsu",
+        "ezcpV",
+        "module"
+    ],
+    "riscv_mmu_0000": [
+        "riscv_mmu_0000",
+        "WT7Yr",
+        "module"
+    ],
+    "dport_mux": [
+        "dport_mux",
+        "aaYnL",
+        "module"
+    ]
+}

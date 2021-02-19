@@ -60,6 +60,8 @@ module icache
     ,input           req_flush_i
     ,input           req_invalidate_i
     ,input  [ 31:0]  req_pc_i           //request pc from the core
+
+    
     ,input           axi_awready_i
     ,input           axi_wready_i
     ,input           axi_bvalid_i
@@ -77,6 +79,7 @@ module icache
     ,output          req_valid_o
     ,output          req_error_o
     ,output [ 31:0]  req_inst_o         
+
     ,output          axi_awvalid_o
     ,output [ 31:0]  axi_awaddr_o       //cache to tcm addr
     ,output [  3:0]  axi_awid_o
@@ -94,6 +97,40 @@ module icache
     ,output [  1:0]  axi_arburst_o
     ,output          axi_rready_o
 );
+
+
+// AXI interface reg
+// input
+wire          axi_awready_i    ;          
+wire          axi_wready_i     ;          
+wire          axi_bvalid_i     ;          
+wire [  1:0]  axi_bresp_i      ;          
+wire [  3:0]  axi_bid_i        ;      
+wire          axi_arready_i    ;          
+wire          axi_rvalid_i     ;          
+wire [ 31:0]  axi_rdata_i      ;  //instruction tcm to cache
+wire [  1:0]  axi_rresp_i      ;          
+wire [  3:0]  axi_rid_i        ;      
+wire          axi_rlast_i      ;          
+
+
+// output
+wire          axi_awvalid_o   ;       
+wire [ 31:0]  axi_awaddr_o    ;   //cache to tcm addr
+wire [  3:0]  axi_awid_o      ;       
+wire [  7:0]  axi_awlen_o     ;           
+wire [  1:0]  axi_awburst_o   ;           
+wire          axi_wvalid_o    ;           
+wire [ 31:0]  axi_wdata_o     ;           
+wire [  3:0]  axi_wstrb_o     ;           
+wire          axi_wlast_o     ;           
+wire          axi_bready_o    ;           
+wire          axi_arvalid_o   ;           
+wire [ 31:0]  axi_araddr_o    ;           
+wire [  3:0]  axi_arid_o      ;       
+wire [  7:0]  axi_arlen_o     ;           
+wire [  1:0]  axi_arburst_o   ;           
+wire          axi_rready_o    ;           
 
 
 //-----------------------------------------------------------------

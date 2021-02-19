@@ -1,0 +1,158 @@
+# Preference setting overrides
+gui_create_pref_key -category {Globals} -key {load_detail_for_funcov} -value_type {bool} -value {false}
+
+# State setting overrides
+gui_state_default_create -off -ini
+gui_set_state_value -category Globals -key recent_databases -value {{gui_open_db -file /home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd -design V1} {gui_open_db -file /home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd -design V2}}
+gui_set_state_value -category Globals -key recent_sessions -value {{gui_load_session -ignore_errors -file /home/uho/workspace/RISCV_RTL_SIM/sim/DVEfiles//crash_02.19-14.01/dve_session02.19-14.01.tcl}}
+gui_set_state_value -category Layout -key child_console_size_x -value 1853
+gui_set_state_value -category Layout -key child_console_size_y -value 175
+gui_set_state_value -category Layout -key child_data_coltype -value 76
+gui_set_state_value -category Layout -key child_data_colvalue -value 109
+gui_set_state_value -category Layout -key child_data_colvariable -value 229
+gui_set_state_value -category Layout -key child_data_size_x -value 420
+gui_set_state_value -category Layout -key child_data_size_y -value 797
+gui_set_state_value -category Layout -key child_hier_col3 -value {-1}
+gui_set_state_value -category Layout -key child_hier_colhier -value 232
+gui_set_state_value -category Layout -key child_hier_colpd -value 0
+gui_set_state_value -category Layout -key child_hier_coltype -value 88
+gui_set_state_value -category Layout -key child_hier_size_x -value 328
+gui_set_state_value -category Layout -key child_hier_size_y -value 797
+gui_set_state_value -category Layout -key child_source_docknewline -value false
+gui_set_state_value -category Layout -key child_source_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_source_pos_y -value {-15}
+gui_set_state_value -category Layout -key child_source_size_x -value 1109
+gui_set_state_value -category Layout -key child_source_size_y -value 792
+gui_set_state_value -category Layout -key child_watch_size_x -value 1854
+gui_set_state_value -category Layout -key child_watch_size_y -value 340
+gui_set_state_value -category Layout -key child_wave_colname -value 266
+gui_set_state_value -category Layout -key child_wave_colvalue -value 267
+gui_set_state_value -category Layout -key child_wave_docknewline -value false
+gui_set_state_value -category Layout -key child_wave_left -value 538
+gui_set_state_value -category Layout -key child_wave_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_wave_pos_y -value {-15}
+gui_set_state_value -category Layout -key child_wave_right -value 1312
+gui_set_state_value -category Layout -key child_wave_size_x -value 1859
+gui_set_state_value -category Layout -key child_wave_size_y -value 635
+gui_set_state_value -category Layout -key main_pos_x -value 65
+gui_set_state_value -category Layout -key main_pos_y -value 554
+gui_set_state_value -category Layout -key main_size_x -value 1917
+gui_set_state_value -category Layout -key main_size_y -value 1600
+gui_set_state_value -category Layout -key stand_wave_child_docknewline -value false
+gui_set_state_value -category Layout -key stand_wave_child_pos_x -value {-2}
+gui_set_state_value -category Layout -key stand_wave_child_pos_y -value {-15}
+gui_set_state_value -category Layout -key stand_wave_child_size_x -value 1860
+gui_set_state_value -category Layout -key stand_wave_child_size_y -value 976
+gui_set_state_value -category Layout -key stand_wave_top_pos_x -value 64
+gui_set_state_value -category Layout -key stand_wave_top_pos_y -value 546
+gui_set_state_value -category Layout -key stand_wave_top_size_x -value 1919
+gui_set_state_value -category Layout -key stand_wave_top_size_y -value 1602
+gui_create_state_key -category FindDialog -key m_pMatchCase -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pMatchWord -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pUseCombo -value_type string -value {}
+gui_create_state_key -category FindDialog -key m_pWrapAround -value_type bool -value true
+gui_create_state_key -category Widget_History -key Find|m_pFindFrame|m_pFindCombo -value_type string -value {riscv_tcm UUT_RISCV rst_cpu_i ram tb_inst_addr_i}
+gui_create_state_key -category Widget_History -key TopLevel.1|qt_top_dock|&Edit|FindCombo -value_type string -value {riscv_tcm UUT_RISCV rst_cpu_i ram tb_inst_addr_i}
+gui_create_state_key -category Widget_History -key TopLevel.2|EkTopVbox|wndWorkspace|qt_workspacechild2|Wave.1|left|filterVBox|controlHBox|unnamed -value_type string -value *pc
+gui_create_state_key -category Widget_History -key TopLevel.2|qt_top_dock|&Edit|FindCombo -value_type string -value {riscv_tcm UUT_RISCV rst_cpu_i ram tb_inst_addr_i}
+gui_state_default_create -off
+
+# Begin command logging
+gui_open_db -file /home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd -design V1
+gui_list_expand -id  Hier.1   tb_tcm_riscv_top
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top -current_item_type Scope  -selected  { tb_tcm_riscv_top   }
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top } -insertionbar
+gui_list_expand -id  Hier.1   tb_tcm_riscv_top.UUT_RISCV_SOC
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core } -insertionbar
+gui_marker_move -id  Wave.1 C1 62
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 4732
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_i_pc_o[31:0]}   }
+gui_marker_move -id  Wave.1 C1 10509
+gui_marker_move -id  Wave.1 C1 9379
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 39991
+gui_marker_move -id  Wave.1 C1 35429
+gui_marker_move -id  Wave.1 C1 15689
+gui_marker_move -id  Wave.1 C1 34065
+gui_find -next -id Wave.1 -expr rst_i 
+gui_find -next -id Wave.1 -expr rst_i 
+gui_find -next -id Wave.1 -expr rst_i 
+gui_find -next -id Wave.1 -expr rst_i 
+gui_find -next -id Wave.1 -expr rst_i 
+gui_find -next -id Wave.1 -expr rst_i 
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_i_pc_o[31:0]}   }
+gui_use_schematics 
+gui_sch_show -name {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_i_pc_o[31:0]}
+gui_set_pref_value -category {schem_pin_hc} -key {textExtFont} -value {Helvetica,10,-1,5,50,0,0,0,0,0}
+gui_zoom -window Schematic.1 -rect { {-8184 -4073} {18183 14096} }
+gui_zoom -window Schematic.1 -rect { {-2387 -397807} {617617 29446} }
+gui_zoom -window Schematic.1 -rect { {-2387 -397807} {617617 29446} }
+gui_zoom -window Schematic.1 -rect { {-2387 -397807} {617617 29446} }
+gui_zoom -window Schematic.1 -factor 1.414
+gui_zoom -window Schematic.1 -rect { {88723 -335427} {527198 -33268} }
+gui_zoom -window Schematic.1 -factor 1.414
+gui_zoom -window Schematic.1 -rect { {152946 -291398} {463042 -77707} }
+gui_zoom -window Schematic.1 -factor 1.414
+gui_zoom -window Schematic.1 -rect { {198402 -260157} {417705 -109031} }
+gui_zoom -window Schematic.1 -rect { {198402 -305474} {417705 -154349} }
+gui_zoom -window Schematic.1 -rect { {198402 -350792} {417705 -199666} }
+gui_zoom -window Schematic.1 -rect { {198402 -373248} {417705 -222123} }
+gui_zoom -window Schematic.1 -rect { {188648 -374984} {419494 -215904} }
+gui_zoom -window Schematic.1 -rect { {190180 -368990} {410033 -217486} }
+gui_zoom -window Schematic.1 -rect { {191908 -362983} {401293 -218693} }
+gui_zoom -window Schematic.1 -rect { {193592 -357188} {393005 -219770} }
+gui_zoom -window Schematic.1 -rect { {195379 -351442} {385296 -220567} }
+gui_zoom -window Schematic.1 -rect { {197056 -345777} {377930 -221134} }
+gui_zoom -window Schematic.1 -rect { {198923 -340223} {371184 -221515} }
+gui_zoom -window Schematic.1 -rect { {192031 -340691} {373358 -215736} }
+gui_zoom -window Schematic.1 -rect { {184917 -341123} {375788 -209591} }
+gui_zoom -window Schematic.1 -rect { {171887 -345446} {383966 -199300} }
+gui_zoom -window Schematic.1 -rect { {157366 -350251} {393009 -187866} }
+gui_zoom -window Schematic.1 -rect { {148065 -351132} {396110 -180200} }
+gui_zoom -window Schematic.1 -rect { {138310 -352167} {399410 -172239} }
+gui_zoom -window Schematic.1 -rect { {127876 -353118} {402719 -163720} }
+gui_zoom -window Schematic.1 -rect { {109198 -359682} {414579 -149240} }
+gui_zoom -window Schematic.1 -rect { {97188 -360779} {418641 -139261} }
+gui_zoom -window Schematic.1 -rect { {84546 -362028} {422918 -128851} }
+gui_zoom -window Schematic.1 -rect { {70959 -363441} {427140 -117991} }
+gui_zoom -window Schematic.1 -rect { {56744 -364686} {431671 -106318} }
+gui_zoom -window Schematic.1 -rect { {41926 -366088} {436586 -94122} }
+gui_zoom -window Schematic.1 -rect { {26156 -367659} {441587 -81379} }
+gui_zoom -window Schematic.1 -rect { {9818 -369010} {447114 -67663} }
+gui_zoom -window Schematic.1 -rect { {-7465 -370518} {452847 -53310} }
+gui_zoom -window Schematic.1 -rect { {-25703 -372194} {458837 -38291} }
+gui_zoom -window Schematic.1 -rect { {-44900 -374053} {465142 -22576} }
+gui_zoom -window Schematic.1 -rect { {-65058 -376108} {471828 -6132} }
+gui_zoom -window Schematic.1 -rect { {-59161 -359905} {452158 -7548} }
+gui_zoom -window Schematic.1 -rect { {-42695 -336621} {422141 -16295} }
+gui_zoom -window Schematic.1 -rect { {151987 -336621} {616823 -16295} }
+gui_marker_move -id  Wave.1 C1 35301
+gui_marker_move -id  Wave.1 C1 37902
+gui_marker_move -id  Wave.1 C1 42549
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_save_session -reload -default_file
+gui_zoom -window Schematic.1 -rect { {-8184 -4073} {18183 14096} }
+gui_zoom -window Schematic.1 -rect { {-8184 -4073} {18183 14096} }
+gui_zoom -window Schematic.1 -rect { {-8184 -4073} {18183 14096} }
+gui_zoom -window Schematic.1 -rect { {-8184 -4073} {18183 14096} }
+gui_zoom -window Schematic.1 -rect { {-8184 -4073} {18183 14096} }
+gui_zoom -window Schematic.1 -rect { {-2387 -397807} {617617 29446} }
+gui_zoom -window Schematic.1 -rect { {-2387 -397807} {617617 29446} }
+gui_zoom -window Schematic.1 -rect { {151847 -336654} {616255 -16623} }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core -current_item_type Scope  -selected  {  }
+gui_close_window -window  Schematic.1
+gui_marker_move -id  Wave.1 C1 35728
+gui_marker_move -id  Wave.1 C1 36666
+gui_save_session -reload -default_file

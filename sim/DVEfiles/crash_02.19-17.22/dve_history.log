@@ -1,0 +1,843 @@
+# Preference setting overrides
+gui_create_pref_key -category {Globals} -key {load_detail_for_funcov} -value_type {bool} -value {false}
+
+# State setting overrides
+gui_state_default_create -off -ini
+gui_set_state_value -category Globals -key recent_databases -value {{gui_open_db -file /home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd -design V2} {gui_open_db -file /home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd -design V1}}
+gui_set_state_value -category Globals -key recent_sessions -value {{gui_load_session -ignore_errors -file /home/uho/workspace/RISCV_RTL_SIM/sim/DVEfiles//crash_02.19-14.53/dve_session02.19-14.53.tcl} {gui_load_session -ignore_errors -file /home/uho/workspace/RISCV_RTL_SIM/sim/DVEfiles//crash_02.19-14.01/dve_session02.19-14.01.tcl}}
+gui_set_state_value -category Layout -key child_console_size_x -value 1853
+gui_set_state_value -category Layout -key child_console_size_y -value 175
+gui_set_state_value -category Layout -key child_data_coltype -value 76
+gui_set_state_value -category Layout -key child_data_colvalue -value 109
+gui_set_state_value -category Layout -key child_data_colvariable -value 229
+gui_set_state_value -category Layout -key child_data_size_x -value 420
+gui_set_state_value -category Layout -key child_data_size_y -value 797
+gui_set_state_value -category Layout -key child_hier_col3 -value {-1}
+gui_set_state_value -category Layout -key child_hier_colhier -value 232
+gui_set_state_value -category Layout -key child_hier_colpd -value 0
+gui_set_state_value -category Layout -key child_hier_coltype -value 88
+gui_set_state_value -category Layout -key child_hier_size_x -value 328
+gui_set_state_value -category Layout -key child_hier_size_y -value 797
+gui_set_state_value -category Layout -key child_schematic_docknewline -value false
+gui_set_state_value -category Layout -key child_schematic_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_schematic_pos_y -value {-15}
+gui_set_state_value -category Layout -key child_schematic_size_x -value 1108
+gui_set_state_value -category Layout -key child_schematic_size_y -value 791
+gui_set_state_value -category Layout -key child_source_docknewline -value false
+gui_set_state_value -category Layout -key child_source_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_source_pos_y -value {-15}
+gui_set_state_value -category Layout -key child_source_size_x -value 1109
+gui_set_state_value -category Layout -key child_source_size_y -value 792
+gui_set_state_value -category Layout -key child_watch_size_x -value 1854
+gui_set_state_value -category Layout -key child_watch_size_y -value 340
+gui_set_state_value -category Layout -key child_wave_colname -value 266
+gui_set_state_value -category Layout -key child_wave_colvalue -value 267
+gui_set_state_value -category Layout -key child_wave_docknewline -value false
+gui_set_state_value -category Layout -key child_wave_left -value 538
+gui_set_state_value -category Layout -key child_wave_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_wave_pos_y -value {-15}
+gui_set_state_value -category Layout -key child_wave_right -value 1312
+gui_set_state_value -category Layout -key child_wave_size_x -value 1859
+gui_set_state_value -category Layout -key child_wave_size_y -value 635
+gui_set_state_value -category Layout -key main_pos_x -value 65
+gui_set_state_value -category Layout -key main_pos_y -value 554
+gui_set_state_value -category Layout -key main_size_x -value 1916
+gui_set_state_value -category Layout -key main_size_y -value 1599
+gui_set_state_value -category Layout -key stand_wave_child_docknewline -value false
+gui_set_state_value -category Layout -key stand_wave_child_pos_x -value {-2}
+gui_set_state_value -category Layout -key stand_wave_child_pos_y -value {-15}
+gui_set_state_value -category Layout -key stand_wave_child_size_x -value 1860
+gui_set_state_value -category Layout -key stand_wave_child_size_y -value 976
+gui_set_state_value -category Layout -key stand_wave_top_pos_x -value 64
+gui_set_state_value -category Layout -key stand_wave_top_pos_y -value 546
+gui_set_state_value -category Layout -key stand_wave_top_size_x -value 1919
+gui_set_state_value -category Layout -key stand_wave_top_size_y -value 1602
+gui_create_state_key -category FindDialog -key m_pMatchCase -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pMatchWord -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pUseCombo -value_type string -value {}
+gui_create_state_key -category FindDialog -key m_pWrapAround -value_type bool -value true
+gui_create_state_key -category Widget_History -key Find|m_pFindFrame|m_pFindCombo -value_type string -value {mem_pc mem_pc_i pi_i mem_pi_i rst_i}
+gui_create_state_key -category Widget_History -key TopLevel.1|qt_top_dock|&Edit|FindCombo -value_type string -value {mem_pc mem_pc_i pi_i mem_pi_i rst_i}
+gui_create_state_key -category Widget_History -key TopLevel.2|EkTopVbox|wndWorkspace|qt_workspacechild2|Wave.1|left|filterVBox|controlHBox|unnamed -value_type string -value *pc
+gui_create_state_key -category Widget_History -key TopLevel.2|qt_top_dock|&Edit|FindCombo -value_type string -value {mem_pc mem_pc_i pi_i mem_pi_i rst_i}
+gui_state_default_create -off
+
+# Begin command logging
+gui_open_db -file /home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd -design V1
+gui_list_select -id Hier.1 -current_item_name dport_axi -current_item_type Scope  -selected  {  }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top -current_item_type Scope  -selected  { tb_tcm_riscv_top   }
+gui_list_expand -id  Hier.1   tb_tcm_riscv_top
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC   }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC -current_item_type Scope  -selected  {  }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC   }
+gui_list_expand -id  Hier.1   tb_tcm_riscv_top.UUT_RISCV_SOC
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache   }
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache } -insertionbar
+gui_find -next -id Wave.1 -expr req_pc_i 
+gui_marker_move -id  Wave.1 C1 31
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scroll_hslidermove -id  Wave.1 2529
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_find -next -id Wave.1 -expr addr 
+gui_save_session -reload -default_file
+gui_marker_move -id  Wave.1 C1 10765
+gui_marker_move -id  Wave.1 C1 6097
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache -current_item_type Scope  -selected  {  }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top -current_item_type Scope  -selected  { tb_tcm_riscv_top   }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC   }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core } -insertionbar
+gui_marker_move -id  Wave.1 C1 4668
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_i_pc_o[31:0]}   }
+gui_marker_move -id  Wave.1 C1 4924
+gui_list_collapse -id  Wave.1   u_icache|u_core
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.req_pc_i[31:0]}   }
+gui_marker_move -id  Wave.1 C1 5585
+gui_close_window -window TopLevel.2
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core -current_item_type Scope  -selected  {  }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core   }
+gui_use_schematics 
+gui_path_show -objects tb_tcm_riscv_top.UUT_RISCV_SOC.u_core
+gui_set_pref_value -category {schem_pin_hc} -key {textExtFont} -value {Helvetica,10,-1,5,50,0,0,0,0,0}
+gui_zoom -window Schematic.1 -rect { {-8189 -4073} {18188 14096} }
+gui_zoom -window Schematic.1 -rect { {-81144 -114043} {90398 4120} }
+gui_zoom -window Schematic.1 -rect { {-81144 -114043} {90398 4120} }
+gui_close_window -window  Schematic.1
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core } -insertionbar
+gui_wv_zoom_timerange -id  Wave.1 0 430
+gui_marker_move -id  Wave.1 C1 99
+gui_marker_move -id  Wave.1 C1 52
+gui_close_window -window TopLevel.2
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC   }
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC } -insertionbar
+gui_wv_zoom_timerange -id  Wave.1 0 430
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.rst_cpu_i   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 34000
+gui_set_time_units 1ns
+gui_marker_move -id  Wave.1 C1 403.85
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.dcache_cacheable_w   }
+gui_marker_move -id  Wave.1 C1 198.52
+gui_marker_move -id  Wave.1 C1 381.7
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.dcache_accept_w   }
+gui_marker_move -id  Wave.1 C1 506.95
+gui_marker_move -id  Wave.1 C1 386.81
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.boot_vector_w[31:0]}   }
+gui_marker_move -id  Wave.1 C1 396.19
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.axi_i_awready_i   }
+gui_marker_move -id  Wave.1 C1 126.1
+gui_list_select -id Wave.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.axi_i_wready_i  tb_tcm_riscv_top.UUT_RISCV_SOC.axi_i_bvalid_i  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_i_bresp_i[1:0]}  tb_tcm_riscv_top.UUT_RISCV_SOC.axi_i_arready_i  tb_tcm_riscv_top.UUT_RISCV_SOC.axi_i_rvalid_i  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_i_rdata_i[31:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_i_rresp_i[1:0]}  tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_awvalid_i  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_awaddr_i[31:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_awid_i[3:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_awlen_i[7:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_awburst_i[1:0]}  tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_wvalid_i  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_wdata_i[31:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_wstrb_i[3:0]}  tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_wlast_i  tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_bready_i  tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_arvalid_i  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_araddr_i[31:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_arid_i[3:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_arlen_i[7:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_arburst_i[1:0]}  tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_rready_i  {tb_tcm_riscv_top.UUT_RISCV_SOC.intr_i[31:0]}   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.axi_i_awvalid_o   }
+gui_marker_move -id  Wave.1 C1 340
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 0.5
+gui_save_session -reload -default_file
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.BOOT_VECTOR[31:0]}   }
+gui_list_select_all -id Wave.1
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.icache_invalidate_w   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.BOOT_VECTOR[31:0]}   }
+gui_list_select_all -id Wave.1
+gui_list_set_selected_property -id Wave.1 -radix hex
+gui_marker_move -id  Wave.1 C1 279.47
+gui_marker_move -id  Wave.1 C1 361.69
+gui_marker_move -id  Wave.1 C1 196.82
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.dcache_error_w   }
+gui_find -next -id Wave.1 -expr pc 
+gui_find -next -id Wave.1 -expr pc 
+gui_find -next -id Wave.1 -expr pc 
+gui_find -next -id Wave.1 -expr pc 
+gui_list_expand -id  Hier.1   tb_tcm_riscv_top.UUT_RISCV_SOC
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC } -insertionbar
+gui_find -next -id Wave.1 -expr mem_pc_i 
+gui_find -next -id Wave.1 -expr mem_pc 
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC -current_item_type Scope  -selected  {  }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core } -insertionbar
+gui_find -next -id Wave.1 -expr mem_pc 
+gui_find -next -id Wave.1 -expr mem_i_pc_o 
+gui_zoom -window Wave.1 -factor 0.5
+gui_find -next -id Wave.1 -expr reset_vector_io 
+gui_find -next -id Wave.1 -expr reset_vector_i 
+gui_list_expand -id  Hier.1   tb_tcm_riscv_top.UUT_RISCV_SOC.u_core
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_csr -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_csr   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_csr } -insertionbar
+gui_find -next -id Wave.1 -expr reset_vector_i 
+gui_list_select_all -id Wave.1
+gui_find -next -id Wave.1 -expr reset_vector_ibranch_csr_pc_o 
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mmu_lsu_resp_tag_w[10:0]}   }
+gui_find -next -id Wave.1 -expr reset_vector_ibranch_csr_pc_o 
+gui_find -next -id Wave.1 -expr branch_csr_pc_o 
+gui_marker_move -id  Wave.1 C1 70
+gui_marker_select -id  Wave.1 { C1 }
+gui_marker_move -id  Wave.1 C1 64.75
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue } -insertionbar
+gui_find -next -id Wave.1 -expr branch_pc_o 
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_fetch -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_fetch   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_fetch } -insertionbar
+gui_find -next -id Wave.1 -expr icache_pc_o 
+gui_find -next -id Wave.1 -expr icache_pc_w 
+gui_find -next -id Wave.1 -expr {pc f q} 
+gui_find -next -id Wave.1 -expr pc_f_q 
+gui_find -next -id Wave.1 -expr branch_w 
+gui_find -next -id Wave.1 -expr branch_w 
+gui_find -next -id Wave.1 -expr branch_w 
+gui_find -next -id Wave.1 -expr branch_w 
+gui_find -next -id Wave.1 -expr branch_w 
+gui_marker_move -id  Wave.1 C1 70
+gui_marker_move -id  Wave.1 C1 70
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_fetch.stall_q   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_fetch.fetch_fault_fetch_o   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_fetch.branch_pc_w[31:0]}   }
+gui_marker_move -id  Wave.1 C1 94.57
+gui_marker_move -id  Wave.1 C1 70
+gui_marker_move -id  Wave.1 C1 70
+gui_marker_move -id  Wave.1 C1 97.98
+gui_marker_move -id  Wave.1 C1 102.24
+gui_marker_move -id  Wave.1 C1 96.28
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_fetch.pc_f_q[31:0]}   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_fetch.active_q   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_fetch.branch_pc_i[31:0]}   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_fetch.stall_w   }
+gui_find -next -id Wave.1 -expr fetch_accept_i 
+gui_save_session -reload -default_file
+gui_marker_move -id  Wave.1 C1 284.57
+gui_marker_move -id  Wave.1 C1 414.93
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_wv_scroll_vslidermove -id  Wave.1 9839
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scroll_vslidermove -id  Wave.1 0
+gui_marker_move -id  Wave.1 C1 47440.05
+gui_marker_move -id  Wave.1 C1 40024.14
+gui_marker_move -id  Wave.1 C1 38170.16
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.CORE_ID[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.BOOT_VECTOR[31:0]}   }
+gui_marker_move -id  Wave.1 C1 19739.42
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.icache_rd_w   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.BOOT_VECTOR[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.ifetch_inst_w[31:0]}   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.AXI_c_arready   }
+gui_find -next -id Wave.1 -expr mem_i_pc_o 
+gui_marker_move -id  Wave.1 C1 7306.86
+gui_marker_move -id  Wave.1 C1 4471.36
+gui_save_session -reload -default_file
+gui_scroll -window Wave.1 -hrel .2
+gui_find -next -id Wave.1 -expr mem_i_pc_o 
+gui_find -next -id Wave.1 -expr mem_i_pc_o 
+gui_save_session -reload -default_file
+gui_find -next -id Wave.1 -expr req_pc_i 
+gui_list_collapse -id  Hier.1   tb_tcm_riscv_top.UUT_RISCV_SOC.u_core
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC } -insertionbar
+gui_find -next -id Wave.1 -expr req_pc_i 
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache } -insertionbar
+gui_find -next -id Wave.1 -expr req_pc_i 
+gui_find -next -id Wave.1 -expr mem_pc_i 
+gui_find -next -id Wave.1 -expr mem_pc_ 
+gui_find -next -id Wave.1 -expr mem_pc 
+gui_find -next -id Wave.1 -expr mem_i_pc 
+gui_list_collapse -id  Wave.1   UUT_RISCV_SOC|UUT_RISCV_SOC|u_core
+gui_list_collapse -id  Wave.1   UUT_RISCV_SOC|UUT_RISCV_SOC|u_issue
+gui_wv_scroll_vslidermove -id  Wave.1 6461
+gui_list_select -id Wave.1 -selected  { UUT_RISCV_SOC|UUT_RISCV_SOC|u_issue   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.axi_i_awready_i   }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache   }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache } -insertionbar
+gui_find -next -id Wave.1 -expr req_pc_i 
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_rready_i   }
+gui_list_select -id Wave.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_rready_i  tb_tcm_riscv_top.UUT_RISCV_SOC.axi_i_awready_i  tb_tcm_riscv_top.UUT_RISCV_SOC.axi_i_wready_i  tb_tcm_riscv_top.UUT_RISCV_SOC.axi_i_bvalid_i  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_i_bresp_i[1:0]}  tb_tcm_riscv_top.UUT_RISCV_SOC.axi_i_arready_i  tb_tcm_riscv_top.UUT_RISCV_SOC.axi_i_rvalid_i  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_i_rdata_i[31:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_i_rresp_i[1:0]}  tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_awvalid_i  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_awaddr_i[31:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_awid_i[3:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_awlen_i[7:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_awburst_i[1:0]}  tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_wvalid_i  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_wdata_i[31:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_wstrb_i[3:0]}  tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_wlast_i  tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_bready_i  tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_arvalid_i  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_araddr_i[31:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_arid_i[3:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_arlen_i[7:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_arburst_i[1:0]}  tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_rready_i   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.intr_i[31:0]}   }
+gui_list_expand -id  Wave.1   UUT_RISCV_SOC|UUT_RISCV_SOC|u_core
+gui_marker_move -id  Wave.1 C1 5016.65
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache -current_item_type Scope  -selected  {  }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC   }
+gui_use_schematics 
+gui_sch_show -name tb_tcm_riscv_top.UUT_RISCV_SOC
+gui_zoom -window Schematic.1 -rect { {-8189 -4073} {18188 14096} }
+gui_zoom -window Schematic.1 -rect { {-7160 -174320} {253112 4962} }
+gui_zoom -window Schematic.1 -rect { {-7160 -174320} {253112 4962} }
+gui_zoom -window Schematic.1 -rect { {-7160 -174320} {253112 4962} }
+gui_schematic_select -id Schematic.1 -type {net} -parent {tb_tcm_riscv_top.UUT_RISCV_SOC} {tb_tcm_riscv_top.UUT_RISCV_SOC.dcache_req_tag_w}
+gui_zoom -window Schematic.1 -rect { {-13826 -179164} {260145 9554} }
+gui_zoom -window Schematic.1 -rect { {-21175 -183984} {267215 14666} }
+gui_zoom -window Schematic.1 -rect { {-14366 -179432} {260291 9759} }
+gui_zoom -window Schematic.1 -rect { {-1824 -168296} {247864 3696} }
+gui_zoom -window Schematic.1 -rect { {-3815 -158089} {223174 -1733} }
+gui_zoom -window Schematic.1 -rect { {-5625 -148829} {200729 -6687} }
+gui_zoom -window Schematic.1 -rect { {-11922 -143657} {184606 -8284} }
+gui_zoom -window Schematic.1 -rect { {-13539 -135821} {165123 -12754} }
+gui_zoom -window Schematic.1 -rect { {-19053 -131336} {151100 -14129} }
+gui_zoom -window Schematic.1 -rect { {-20524 -124608} {134161 -18057} }
+gui_zoom -window Schematic.1 -rect { {-20259 -120956} {127060 -19478} }
+gui_zoom -window Schematic.1 -rect { {-16747 -115230} {117179 -22978} }
+gui_zoom -window Schematic.1 -rect { {-13487 -110306} {108264 -26441} }
+gui_zoom -window Schematic.1 -rect { {-13198 -108502} {102756 -28630} }
+gui_zoom -window Schematic.1 -rect { {-12091 -108543} {98341 -32474} }
+gui_zoom -window Schematic.1 -rect { {-8550 -106670} {91842 -37517} }
+gui_zoom -window Schematic.1 -rect { {-5222 -104918} {86045 -42051} }
+gui_zoom -window Schematic.1 -rect { {-2999 -104336} {83922 -44463} }
+gui_zoom -window Schematic.1 -rect { {2749 -101157} {78331 -49093} }
+gui_zoom -window Schematic.1 -rect { {6371 -99177} {75083 -51847} }
+gui_zoom -window Schematic.1 -rect { {8211 -98250} {73651 -53173} }
+gui_zoom -window Schematic.1 -rect { {12675 -95415} {69579 -56218} }
+gui_zoom -window Schematic.1 -rect { {16554 -92774} {66036 -58690} }
+gui_zoom -window Schematic.1 -rect { {17866 -91880} {64991 -59419} }
+gui_schematic_select -id Schematic.1 -type {net} -parent {tb_tcm_riscv_top.UUT_RISCV_SOC} {tb_tcm_riscv_top.UUT_RISCV_SOC.icache_pc_w}
+gui_zoom -window Schematic.1 -rect { {17866 -101584} {64991 -69122} }
+gui_zoom -window Schematic.1 -rect { {17866 -111287} {64991 -78826} }
+gui_zoom -window Schematic.1 -rect { {17866 -120991} {64991 -88529} }
+gui_zoom -window Schematic.1 -rect { {17866 -130694} {64991 -98233} }
+gui_zoom -window Schematic.1 -rect { {17866 -140398} {64991 -107937} }
+gui_zoom -window Schematic.1 -rect { {17467 -141490} {67073 -107321} }
+gui_zoom -window Schematic.1 -rect { {17072 -142645} {69289 -106677} }
+gui_zoom -window Schematic.1 -rect { {16636 -143858} {71600 -105997} }
+gui_zoom -window Schematic.1 -rect { {16157 -145124} {74015 -105270} }
+gui_zoom -window Schematic.1 -rect { {15693 -146437} {76596 -104486} }
+gui_zoom -window Schematic.1 -rect { {15193 -147849} {79302 -103690} }
+gui_zoom -window Schematic.1 -rect { {14657 -149360} {82140 -102876} }
+gui_zoom -window Schematic.1 -rect { {141023 -149360} {208506 -102876} }
+gui_zoom -window Schematic.1 -rect { {141023 -135465} {208506 -88981} }
+gui_zoom -window Schematic.1 -rect { {141023 -121570} {208506 -75086} }
+gui_zoom -window Schematic.1 -rect { {141023 -107674} {208506 -61191} }
+gui_zoom -window Schematic.1 -rect { {141023 -93779} {208506 -47295} }
+gui_zoom -window Schematic.1 -rect { {141023 -107674} {208506 -61191} }
+gui_zoom -window Schematic.1 -rect { {141023 -121570} {208506 -75086} }
+gui_marker_move -id  Wave.1 C1 11232.93
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.reset_vector_i[31:0]}   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.fetch_dec_fault_page_w   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_i_pc_o[31:0]}   }
+gui_find -next -id Wave.1 -expr req_pc_i 
+gui_list_select -id Wave.1 -selected  { u_icache_1   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_collapse -id  Wave.1   UUT_RISCV_SOC|UUT_RISCV_SOC|u_core|u_csr
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.fetch_accept_w   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.csr_opcode_opcode_w[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.lsu_opcode_ra_idx_w[4:0]}   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.fetch_dec_fault_fetch_w   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.clk_i   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.dport_req_tag_w[10:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_rid_o[3:0]}   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.AXI_c_bvalid   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.dcache_accept_w   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.dport_axi_cacheable_w   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.dport_data_rd_w[31:0]}   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.dport_axi_cacheable_w   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.dcache_accept_w   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.AXI_c_bvalid   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.axi_t_rid_o[3:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.dport_req_tag_w[10:0]}   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.clk_i   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.fetch_dec_fault_fetch_w   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.lsu_opcode_ra_idx_w[4:0]}   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.fetch_dec_fault_fetch_w   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.clk_i   }
+gui_zoom -window Schematic.1 -rect { {153236 -121570} {220719 -75086} }
+gui_zoom -window Schematic.1 -rect { {153236 -107674} {220719 -61191} }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC -current_item_type Scope  -selected  {  }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.axi_i_bready_o   }
+gui_list_select_all -id Wave.1
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { UUT_RISCV_SOC|UUT_RISCV_SOC|u_core   }
+gui_list_select -id Wave.1 -selected  {  }
+gui_list_expand -id  Wave.1   UUT_RISCV_SOC|UUT_RISCV_SOC|u_core|u_csr
+gui_list_collapse -id  Wave.1   UUT_RISCV_SOC|UUT_RISCV_SOC|u_core|u_csr
+gui_list_select -id Wave.1 -selected  { UUT_RISCV_SOC|UUT_RISCV_SOC|u_core|u_csr   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { UUT_RISCV_SOC|UUT_RISCV_SOC|u_core   }
+gui_zoom -window Schematic.1 -rect { {153236 -121570} {220719 -75086} }
+gui_zoom -window Schematic.1 -rect { {153236 -135465} {220719 -88981} }
+gui_zoom -window Schematic.1 -rect { {153236 -149360} {220719 -102876} }
+gui_zoom -window Schematic.1 -rect { {153236 -163255} {220719 -116772} }
+gui_zoom -window Schematic.1 -rect { {153236 -173786} {220719 -127302} }
+gui_zoom -window Schematic.1 -rect { {153236 -159891} {220719 -113407} }
+gui_zoom -window Schematic.1 -rect { {153236 -145995} {220719 -99512} }
+gui_zoom -window Schematic.1 -rect { {153236 -132100} {220719 -85616} }
+gui_zoom -window Schematic.1 -rect { {85754 -132100} {153236 -85616} }
+gui_zoom -window Schematic.1 -rect { {11417 -132100} {78900 -85616} }
+gui_zoom -window Schematic.1 -rect { {11417 -118205} {78900 -71721} }
+gui_zoom -window Schematic.1 -rect { {11417 -104310} {78900 -57826} }
+gui_zoom -window Schematic.1 -rect { {11417 -90414} {78900 -43931} }
+gui_zoom -window Schematic.1 -rect { {11417 -76519} {78900 -30035} }
+gui_zoom -window Schematic.1 -rect { {11417 -90414} {78900 -43931} }
+gui_zoom -window Schematic.1 -rect { {11417 -104310} {78900 -57826} }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC } -insertionbar
+gui_find -next -id Wave.1 -expr req_pc_i 
+gui_list_select -id Wave.1 -selected  { UUT_RISCV_SOC   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { UUT_RISCV_SOC_1   }
+gui_find -next -id Wave.1 -expr core 
+gui_find -next -id Wave.1 -expr core 
+gui_find -next -id Wave.1 -expr core 
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.dport_axi_writeback_w   }
+gui_list_select_all -id Wave.1
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { UUT_RISCV_SOC_1   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core } -insertionbar
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache } -insertionbar
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag_data_in_r[19:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_i_pc_o[31:0]}   }
+gui_list_collapse -id  Wave.1   u_core_1|u_icache
+gui_find -next -id Wave.1 -expr i_cache_w 
+gui_find -next -id Wave.1 -expr icache_w 
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC } -insertionbar
+gui_find -next -id Wave.1 -expr icache_w 
+gui_find -next -id Wave.1 -expr icache_pc_w 
+gui_save_session -reload -default_file
+gui_zoom -window Schematic.1 -rect { {-8189 -4073} {18188 14096} }
+gui_zoom -window Schematic.1 -rect { {-8189 -4073} {18188 14096} }
+gui_zoom -window Schematic.1 -rect { {-8189 -4073} {18188 14096} }
+gui_zoom -window Schematic.1 -rect { {-8189 -4073} {18188 14096} }
+gui_zoom -window Schematic.1 -rect { {-8189 -4073} {18188 14096} }
+gui_zoom -window Schematic.1 -rect { {-7922 -175348} {253850 4968} }
+gui_zoom -window Schematic.1 -rect { {-7922 -175348} {253850 4968} }
+gui_zoom -window Schematic.1 -rect { {11406 -104338} {78827 -57897} }
+gui_close_window -window  Schematic.1
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC -current_item_type Scope  -selected  {  }
+gui_close_window -window  Source.1
+gui_list_expand -id  Hier.1   tb_tcm_riscv_top.UUT_RISCV_SOC
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache } -insertionbar
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_rready_o   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_arready_i   }
+gui_find -next -id Wave.1 -expr icache_pc_w 
+gui_marker_move -id  Wave.1 C1 37297.7
+gui_find -next -id Wave.1 -expr req_pc_i 
+gui_marker_move -id  Wave.1 C1 11996.34
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag1_addr_bits_w[18:0]}   }
+gui_list_select_all -id Wave.1
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { u_core_1|u_icache_1   }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache -current_item_type Scope  -selected  {  }
+gui_save_session -reload -default_file
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top -current_item_type Scope  -selected  { tb_tcm_riscv_top   }
+gui_list_expand -id  Hier.1   tb_tcm_riscv_top
+gui_list_expand -id  Hier.1   tb_tcm_riscv_top.UUT_RISCV_SOC
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core } -insertionbar
+gui_list_select -id Wave.1 -selected  { u_core_1   }
+gui_list_select -id Wave.1 -selected  { u_core_1|u_icache_1   }
+gui_list_select_all -id Wave.1
+gui_list_select -id Wave.1 -selected  { u_core_1   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC   }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core } -insertionbar
+gui_marker_move -id  Wave.1 C1 10251.41
+gui_find -next -id Wave.1 -expr pc 
+gui_find -next -id Wave.1 -expr pc 
+gui_find -next -id Wave.1 -expr pc 
+gui_find -next -id Wave.1 -expr pc 
+gui_find -next -id Wave.1 -expr pc 
+gui_find -next -id Wave.1 -expr pc 
+gui_find -next -id Wave.1 -expr pc 
+gui_find -next -id Wave.1 -expr pc 
+gui_find -next -id Wave.1 -expr pc 
+gui_find -next -id Wave.1 -expr pc 
+gui_find -next -id Wave.1 -expr pc 
+gui_find -next -id Wave.1 -expr pc 
+gui_find -next -id Wave.1 -expr pc 
+gui_find -next -id Wave.1 -expr pc_ 
+gui_find -next -id Wave.1 -expr pc_ 
+gui_find -next -id Wave.1 -expr pc_ 
+gui_find -next -id Wave.1 -expr pc_ 
+gui_find -next -id Wave.1 -expr pc_ 
+gui_find -next -id Wave.1 -expr pc_ 
+gui_find -next -id Wave.1 -expr pc_ 
+gui_find -next -id Wave.1 -expr pc_ 
+gui_wv_scroll_vslidermove -id  Wave.1 2864
+gui_find -next -id Wave.1 -expr clk 
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_marker_move -id  Wave.1 C1 66.46
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 198.59
+gui_marker_move -id  Wave.1 C1 70
+gui_find -next -id Wave.1 -expr pc 
+gui_marker_move -id  Wave.1 C1 138.67
+gui_marker_move -id  Wave.1 C1 104.43
+gui_wv_zoom_timerange -id  Wave.1 66.77 69.33
+gui_wv_zoom_timerange -id  Wave.1 66.95 67.05
+gui_zoom -window Wave.1 -full
+gui_marker_move -id  Wave.1 C1 16176.47
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_marker_move -id  Wave.1 C1 2630
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 4477
+gui_wv_scroll_hslidermove -id  Wave.1 4477
+gui_wv_scroll_hslidermove -id  Wave.1 4477
+gui_wv_scroll_hslidermove -id  Wave.1 4477
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scroll_hslidermove -id  Wave.1 1292
+gui_wv_scroll_hslidermove -id  Wave.1 3876
+gui_wv_scroll_hslidermove -id  Wave.1 5168
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_zoom -window Wave.1 -factor 2
+gui_wv_scrollleft -id  Wave.1  page
+gui_marker_move -id  Wave.1 C1 60.47
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 101.59
+gui_zoom -window Wave.1 -factor 2
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 61.68
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core -current_item_type Scope  -selected  {  }
+gui_save_session -reload -default_file
+gui_marker_move -id  Wave.1 C1 45.96
+gui_marker_move -id  Wave.1 C1 37.8
+gui_list_expand -id  Hier.1   tb_tcm_riscv_top
+gui_find -next -id Wave.1 -expr req_pc_i 
+gui_list_expand -id  Hier.1   tb_tcm_riscv_top.UUT_RISCV_SOC
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache } -insertionbar
+gui_find -next -id Wave.1 -expr req_pc_i 
+gui_find -next -id Wave.1 -expr i_cache_pc_w 
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC } -insertionbar
+gui_find -next -id Wave.1 -expr i_cache_pc_w 
+gui_find -next -id Wave.1 -expr icache_pc_w 
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_find -next -id Wave.1 -expr mem_i_pc_o 
+gui_save_session -reload -default_file
+gui_find -next -id Wave.1 -expr boot_vector_w 
+gui_find -next -id Wave.1 -expr mem_i_pc_o 
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC -current_item_type Scope  -selected  {  }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top -current_item_type Scope  -selected  { tb_tcm_riscv_top   }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top -current_item_type Scope  -selected  {  }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top -current_item_type Scope  -selected  { tb_tcm_riscv_top   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top } -insertionbar
+gui_marker_move -id  Wave.1 C1 53.52
+gui_wv_scroll_vslidermove -id  Wave.1 8584
+gui_find -next -id Wave.1 -expr tb_inst_addr_i 
+gui_find -next -id Wave.1 -expr boot_addr 
+gui_find -next -id Wave.1 -expr boot_vector 
+gui_find -next -id Wave.1 -expr i_cache_pc_w 
+gui_find -next -id Wave.1 -expr icache_pc_w 
+gui_find -next -id Wave.1 -expr reset_vecto_i 
+gui_find -next -id Wave.1 -expr reset_vector_i 
+gui_find -next -id Wave.1 -expr mem_i_pc_o 
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 5360
+gui_wv_scroll_hslidermove -id  Wave.1 5552
+gui_wv_scroll_hslidermove -id  Wave.1 5744
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 2960.64
+gui_marker_move -id  Wave.1 C1 2868.73
+gui_find -next -id Wave.1 -expr req_pc_i 
+gui_marker_move -id  Wave.1 C1 2907.43
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.lookup_addr_q[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_i_pc_o[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_req_tag_o[10:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.lsu_opcode_pc_w[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mul_opcode_pc_w[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mmu_ifetch_pc_w[31:0]}   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_writeback_o   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.csr_opcode_pc_w[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.fetch_dec_pc_w[31:0]}   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.fetch_dec_instr_exec_w   }
+gui_list_select_all -id Wave.1
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { u_core_1|u_icache   }
+gui_list_expand -id  Hier.1   tb_tcm_riscv_top.UUT_RISCV_SOC
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache } -insertionbar
+gui_list_select -id Wave.1 -selected  { u_core_1   }
+gui_delete_selected -id  Wave.1
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache } -insertionbar
+gui_marker_move -id  Wave.1 C1 2854.22
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.CACHE_TAG_ADDR_BITS[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.req_pc_i[31:0]}   }
+gui_find -next -id Wave.1 -expr axi 
+gui_list_sort -id  Wave.1   {Name}
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.CACHE_TAG_DATA_W[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_awid_o[3:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_arburst_o[1:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.STATE_W[31:0]}   }
+gui_find -next -id Wave.1 -expr axi_araddr_o 
+gui_find -next -id Wave.1 -expr axi_araddr_o 
+gui_highlight_signals -color_id 0 {{tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_araddr_o[31:0]}} 
+gui_highlight_signals -color_id 0 {{tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_araddr_o[31:0]}} 
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.STATE_W[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_awburst_o[1:0]}   }
+gui_find -next -id Wave.1 -expr axi_awaddr_o 
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_rvalid_i   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_awlen_o[7:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_awaddr_o[31:0]}   }
+gui_highlight_signals -color_id 0 {{tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_awaddr_o[31:0]}} 
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_bid_i[3:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_awid_o[3:0]}   }
+gui_find -next -id Wave.1 -expr req_inst_o 
+gui_highlight_signals -color_id 0 {{tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.req_inst_o[31:0]}} 
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.inst_r[31:0]}   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.invalidate_q   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.lookup_addr_q[31:0]}   }
+gui_find -next -id Wave.1 -expr req_pc_tag_cmp_w 
+gui_find -next -id Wave.1 -expr req_pc_tag_cmp_w 
+gui_find -next -id Wave.1 -expr req_pc_tag_cmp_w 
+gui_highlight_signals -color_id 0 {{tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.req_pc_tag_cmp_w[18:0]}} 
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.req_pc_i[31:0]}   }
+gui_find -next -id Wave.1 -expr tag1_hit_w 
+gui_highlight_signals -color_id 0 {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag1_hit_w} 
+gui_find -next -id Wave.1 -expr tag_hit_any_w 
+gui_highlight_signals -color_id 0 {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag_hit_any_w} 
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag_data_in_r[19:0]}   }
+gui_find -next -id Wave.1 -expr req_valid_o 
+gui_highlight_signals -color_id 0 {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.req_valid_o} 
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.state_q[1:0]}   }
+gui_find -next -id Wave.1 -expr data1_data_out_w 
+gui_highlight_signals -color_id 0 {{tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.data1_data_out_w[31:0]}} 
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.flush_addr_q[7:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.inst_r[31:0]}   }
+gui_find -next -id Wave.1 -expr axi_arvalid_o 
+gui_highlight_signals -color_id 0 {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_arvalid_o} 
+gui_marker_move -id  Wave.1 C1 2640
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_find -next -id Wave.1 -expr state_q 
+gui_highlight_signals -color_id 0 {{tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.state_q[1:0]}} 
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scroll_hslidermove -id  Wave.1 5806
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 39820
+gui_wv_scroll_hslidermove -id  Wave.1 1050
+gui_find -next -id Wave.1 -expr lookup_addr_q 
+gui_highlight_signals -color_id 0 {{tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.lookup_addr_q[31:0]}} 
+gui_find -next -id Wave.1 -expr tag_addr_r 
+gui_highlight_signals -color_id 0 {{tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag_addr_r[7:0]}} 
+gui_find -next -id Wave.1 -expr tag_addr_r 
+gui_find -next -id Wave.1 -expr tag_data_in_r 
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag1_write_r   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag_data_in_r[19:0]}   }
+gui_highlight_signals -color_id 0 {{tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag_data_in_r[19:0]}} 
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag1_data_out_w[19:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag_data_in_r[19:0]}   }
+gui_find -next -id Wave.1 -expr tag1_write_r 
+gui_set_pref_value -category {Schematics} -key {highlight_color} -value {DodgerBlue}
+gui_highlight_signals -color_id 1 {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag1_write_r} 
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag1_addr_bits_w[18:0]}   }
+gui_marker_move -id  Wave.1 C1 2559.12
+gui_marker_move -id  Wave.1 C1 2665.55
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.data0_data_out_w[31:0]}   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_error_q   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.ICACHE_LINE_ADDR_W[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_awburst_o[1:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_awaddr_o[31:0]}   }
+gui_find -next -id Wave.1 -expr lookup_addr_q 
+gui_find -next -id Wave.1 -expr axi_arid_o 
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_araddr_o[31:0]}   }
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_marker_move -id  Wave.1 C1 1323.1
+gui_list_expand -id  Wave.1   {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_araddr_o[31:0]}
+gui_list_collapse -id  Wave.1   {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_araddr_o[31:0]}
+gui_find -next -id Wave.1 -expr lookup 
+gui_marker_move -id  Wave.1 C1 2624.43
+gui_marker_move -id  Wave.1 C1 2740.54
+gui_wv_scroll_hslidermove -id  Wave.1 951
+gui_find -next -id Wave.1 -expr state 
+gui_find -next -id Wave.1 -expr state 
+gui_find -next -id Wave.1 -expr data_write_addr_q 
+gui_marker_move -id  Wave.1 C1 2590
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 2610
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_marker_move -id  Wave.1 C1 2600
+gui_marker_move -id  Wave.1 C1 2590
+gui_marker_move -id  Wave.1 C1 2590
+gui_marker_move -id  Wave.1 C1 2580
+gui_marker_move -id  Wave.1 C1 2570
+gui_marker_move -id  Wave.1 C1 2717.58
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.tag1_data_out_w[19:0]}   }
+gui_list_select_all -id Wave.1
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_wready_i   }
+gui_find -next -id Wave.1 -expr req_pc_tag_cmp_w 
+gui_find -next -id Wave.1 -expr tag_addr_w 
+gui_find -next -id Wave.1 -expr tag_addr_r 
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.rst_i   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_arlen_o[7:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_araddr_o[31:0]}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_save_session -reload -default_file
+gui_marker_move -id  Wave.1 C1 263.65
+gui_marker_move -id  Wave.1 C1 419.67
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.STATE_RELOOKUP[1:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_arburst_o[1:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_icache.axi_araddr_o[31:0]}   }
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 2709.09
+gui_wv_scroll_vslidermove -id  Wave.1 5
+gui_wv_scroll_vslidermove -id  Wave.1 1453
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core } -insertionbar
+gui_find -next -id Wave.1 -expr mem_i_pc_o 
+gui_wv_scroll_hslidermove -id  Wave.1 787
+gui_marker_move -id  Wave.1 C1 2752.63
+gui_find -next -id Wave.1 -expr axi_rddatta_i 
+gui_find -next -id Wave.1 -expr axi_rddata_i 
+gui_find -next -id Wave.1 -expr axi_rdata_i 
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC   }
+gui_list_add -id Wave.1 -from Hier.1 { tb_tcm_riscv_top.UUT_RISCV_SOC } -insertionbar
+gui_zoom -window Wave.1 -full
+gui_find -next -id Wave.1 -expr AXI_c_araddr 
+gui_find -next -id Wave.1 -expr AXI_c_araddr 
+gui_find -next -id Wave.1 -expr AXI_c_araddr 
+gui_find -next -id Wave.1 -expr AXI_c_araddr 
+gui_find -next -id Wave.1 -expr AXI_c_araddr 
+gui_find -next -id Wave.1 -expr axi_araddr_o 
+gui_find -next -id Wave.1 -expr axi_araddr_o 
+gui_find -next -id Wave.1 -expr AXI_c_araddr 
+gui_save_session -reload -default_file
+gui_save_session -reload -default_file

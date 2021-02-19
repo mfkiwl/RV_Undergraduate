@@ -1,6 +1,6 @@
 
 `define NULL 0
-module testbench;
+module tb_tcm_riscv_top;
 
 reg clk;
 reg rst_x;
@@ -15,12 +15,9 @@ initial  begin
    clk = 1'b1;
 end
 initial begin
-  wait_clocks(50);
    rst_x = 1'b1;
    repeat (5) @(posedge clk);
-   #(CKP/2) 
-   #(CKP/2) 
-   rst_x = 1'b0;
+   #(CKP/2) rst_x = 1'b0;
    $display ("Reset disable... Simulation Start !!! ");    
 end
 //task define
@@ -35,7 +32,7 @@ endtask
 //------------------------------------------------
 //Test Input Trace
 //------------------------------------------------
-parameter TRACE_SIZE = 4;
+parameter TRACE_SIZE = 30;
 
 integer               file_decsriptor; // file handler
 integer               file_io; // file handler
@@ -62,74 +59,65 @@ end
 //Test Logic
 //------------------------------------------------
 
-//AXI in
-reg           AXI_i_awready;
-reg           AXI_i_wready;
-reg           AXI_i_bvalid;
-reg  [  1:0]  AXI_i_bresp;
-reg  [  3:0]  AXI_i_bid;
-reg           AXI_i_arready;
-reg           AXI_i_rvalid;
-reg  [ 31:0]  AXI_i_rdata;
-reg  [  1:0]  AXI_i_rresp;
-reg  [  3:0]  AXI_i_rid;
-reg           AXI_i_rlast;
-
-reg           AXI_axi_d_awready;
-reg           AXI_axi_d_wready;
-reg           AXI_axi_d_bvalid;
-reg  [  1:0]  AXI_axi_d_bresp;
-reg  [  3:0]  AXI_axi_d_bid;
-reg           AXI_axi_d_arready;
-reg           AXI_axi_d_rvalid;
-reg  [ 31:0]  AXI_axi_d_rdata;
-reg  [  1:0]  AXI_axi_d_rresp;
-reg  [  3:0]  AXI_axi_d_rid;
-reg           AXI_axi_d_rlast;
-
-reg           AXI_intr;
-reg  [ 31:0]  AXI_reset_vector;
-reg           in_req_enable;
-reg  [ 31:0]  in_req_addr;
+//inputs
+reg          rst_cpu_i;
+reg          AXI_i_awready_i;
+reg          AXI_i_wready_i;
+reg          AXI_i_bvalid_i;
+reg [  1:0]  AXI_i_bresp_i;
+reg          AXI_i_arready_i;
+reg          AXI_i_rvalid_i;
+reg [ 31:0]  AXI_i_rdata_i;
+reg [  1:0]  AXI_i_rresp_i;
+reg          AXI_t_awvalid_i;
+reg [ 31:0]  AXI_t_awaddr_i;
+reg [  3:0]  AXI_t_awid_i;
+reg [  7:0]  AXI_t_awlen_i;
+reg [  1:0]  AXI_t_awburst_i;
+reg          AXI_t_wvalid_i;
+reg [ 31:0]  AXI_t_wdata_i;
+reg [  3:0]  AXI_t_wstrb_i;
+reg          AXI_t_wlast_i;
+reg          AXI_t_bready_i;
+reg          AXI_t_arvalid_i;
+reg [ 31:0]  AXI_t_araddr_i;
+reg [  3:0]  AXI_t_arid_i;
+reg [  7:0]  AXI_t_arlen_i;
+reg [  1:0]  AXI_t_arburst_i;
+reg          AXI_t_rready_i;
+reg [ 31:0]  intr_i;
 
 
-//AXI out  (NOT USED)
-wire          AXI_i_awvalid;
-wire [ 31:0]  AXI_i_awaddr;
-wire [  3:0]  AXI_i_awid;
-wire [  7:0]  AXI_i_awlen;
-wire [  1:0]  AXI_i_awburst;
-wire          AXI_i_wvalid;
-wire [ 31:0]  AXI_i_wdata;
-wire [  3:0]  AXI_i_wstrb;
-wire          AXI_i_wlast;
-wire          AXI_i_bready;
-wire          AXI_i_arvalid;
-wire [ 31:0]  AXI_i_araddr;
-wire [  3:0]  AXI_i_arid;
-wire [  7:0]  AXI_i_arlen;
-wire [  1:0]  AXI_i_arburst;
-wire          AXI_i_rready;
-
-wire          AXI_d_awvalid;
-wire [ 31:0]  AXI_d_awaddr;
-wire [  3:0]  AXI_d_awid;
-wire [  7:0]  AXI_d_awlen;
-wire [  1:0]  AXI_d_awburst;
-wire          AXI_d_wvalid;
-wire [ 31:0]  AXI_d_wdata;
-wire [  3:0]  AXI_d_wstrb;
-wire          AXI_d_wlast;
-wire          AXI_d_bready;
-wire          AXI_d_arvalid;
-wire [ 31:0]  AXI_d_araddr;
-wire [  3:0]  AXI_d_arid;
-wire [  7:0]  AXI_d_arlen;
-wire [  1:0]  AXI_d_arburst;
-wire          AXI_d_rready;
+//outputs
+wire          AXI_i_awvalid_o;
+wire [ 31:0]  AXI_i_awaddr_o;
+wire          AXI_i_wvalid_o;
+wire [ 31:0]  AXI_i_wdata_o;
+wire [  3:0]  AXI_i_wstrb_o;
+wire          AXI_i_bready_o;
+wire          AXI_i_arvalid_o;
+wire [ 31:0]  AXI_i_araddr_o;
+wire          AXI_i_rready_o;
+wire          AXI_t_awready_o;
+wire          AXI_t_wready_o;
+wire          AXI_t_bvalid_o;
+wire [  1:0]  AXI_t_bresp_o;
+wire [  3:0]  AXI_t_bid_o;
+wire          AXI_t_arready_o;
+wire          AXI_t_rvalid_o;
+wire [ 31:0]  AXI_t_rdata_o;
+wire [  1:0]  AXI_t_rresp_o;
+wire [  3:0]  AXI_t_rid_o;
+wire          AXI_t_rlast_o;
 
 
-riscv_top 
+// instruction write port
+reg  [  3:0]  tb_inst_we_i;
+reg  [ 31:0]  tb_inst_addr_i;
+reg  [ 31:0]  tb_inst_data_i;
+
+
+riscv_tcm_top 
 #( 
     .CORE_ID            (0),
     .MEM_CACHE_ADDR_MIN (0),
@@ -138,73 +126,66 @@ riscv_top
 UUT_RISCV_SOC
 (
     // Inputs
-    .clk_i           (clk),         
-    .rst_i           (rst_x),  
+    .clk_i           (clk)
+    ,.rst_i           (rst_x)
 
-    .axi_i_awready_i (AXI_i_awready),        
-    .axi_i_wready_i  (AXI_i_wready),       
-    .axi_i_bvalid_i  (AXI_i_bvalid),       
-    .axi_i_bresp_i   (AXI_i_bresp),      
-    .axi_i_bid_i     (AXI_i_bid),    
-    .axi_i_arready_i (AXI_i_arready),        
-    .axi_i_rvalid_i  (AXI_i_rvalid),       
-    .axi_i_rdata_i   (AXI_i_rdata),    // I-cache inst. write port        
-    .axi_i_rresp_i   (AXI_i_rresp),      
-    .axi_i_rid_i     (AXI_i_rid),    
-    .axi_i_rlast_i   (AXI_i_rlast),   
+ 
+    ,.rst_cpu_i       (rst_cpu_i       )
+    ,.axi_i_awready_i (AXI_i_awready_i )
+    ,.axi_i_wready_i  (AXI_i_wready_i  )
+    ,.axi_i_bvalid_i  (AXI_i_bvalid_i  )
+    ,.axi_i_bresp_i   (AXI_i_bresp_i   )
+    ,.axi_i_arready_i (AXI_i_arready_i )
+    ,.axi_i_rvalid_i  (AXI_i_rvalid_i  )
+    ,.axi_i_rdata_i   (AXI_i_rdata_i   )
+    ,.axi_i_rresp_i   (AXI_i_rresp_i   )
+    ,.axi_t_awvalid_i (AXI_t_awvalid_i )
+    ,.axi_t_awaddr_i  (AXI_t_awaddr_i  )
+    ,.axi_t_awid_i    (AXI_t_awid_i    )
+    ,.axi_t_awlen_i   (AXI_t_awlen_i   )
+    ,.axi_t_awburst_i (AXI_t_awburst_i )
+    ,.axi_t_wvalid_i  (AXI_t_wvalid_i  )
+    ,.axi_t_wdata_i   (AXI_t_wdata_i   )
+    ,.axi_t_wstrb_i   (AXI_t_wstrb_i   )
+    ,.axi_t_wlast_i   (AXI_t_wlast_i   )
+    ,.axi_t_bready_i  (AXI_t_bready_i  )
+    ,.axi_t_arvalid_i (AXI_t_arvalid_i )
+    ,.axi_t_araddr_i  (AXI_t_araddr_i  )
+    ,.axi_t_arid_i    (AXI_t_arid_i    )
+    ,.axi_t_arlen_i   (AXI_t_arlen_i   )
+    ,.axi_t_arburst_i (AXI_t_arburst_i )
+    ,.axi_t_rready_i  (AXI_t_rready_i  )
+    ,.intr_i          (intr_i          )
 
-    .axi_d_awready_i (AXI_d_awready),        
-    .axi_d_wready_i  (AXI_d_wready),       
-    .axi_d_bvalid_i  (AXI_d_bvalid),       
-    .axi_d_bresp_i   (AXI_d_bresp),      
-    .axi_d_bid_i     (AXI_d_bid),    
-    .axi_d_arready_i (AXI_d_arready),        
-    .axi_d_rvalid_i  (AXI_d_rvalid),       
-    .axi_d_rdata_i   (AXI_d_rdata),      
-    .axi_d_rresp_i   (AXI_d_rresp),      
-    .axi_d_rid_i     (AXI_d_rid),    
-    .axi_d_rlast_i   (AXI_d_rlast), 
-
-    .intr_i               (AXI_intr),       
-    .reset_vector_i       (AXI_reset_vector),      
-    .first_init           (in_req_enable),
-    .init_req_data_addr_w (in_req_addr),
-  
 
     // Outputs
-    .axi_i_awvalid_o  (AXI_i_awvalid),      
-    .axi_i_awaddr_o   (AXI_i_awaddr),     
-    .axi_i_awid_o     (AXI_i_awid),   
-    .axi_i_awlen_o    (AXI_i_awlen),    
-    .axi_i_awburst_o  (AXI_i_awburst),      
-    .axi_i_wvalid_o   (AXI_i_wvalid),     
-    .axi_i_wdata_o    (AXI_i_wdata),    
-    .axi_i_wstrb_o    (AXI_i_wstrb),    
-    .axi_i_wlast_o    (AXI_i_wlast),    
-    .axi_i_bready_o   (AXI_i_bready),     
-    .axi_i_arvalid_o  (AXI_i_arvalid),      
-    .axi_i_araddr_o   (AXI_i_araddr),     
-    .axi_i_arid_o     (AXI_i_arid),   
-    .axi_i_arlen_o    (AXI_i_arlen),    
-    .axi_i_arburst_o  (AXI_i_arburst),      
-    .axi_i_rready_o   (AXI_i_rready),     
+    ,.axi_i_awvalid_o (AXI_i_awvalid_o )
+    ,.axi_i_awaddr_o  (AXI_i_awaddr_o  )
+    ,.axi_i_wvalid_o  (AXI_i_wvalid_o  )
+    ,.axi_i_wdata_o   (AXI_i_wdata_o   )
+    ,.axi_i_wstrb_o   (AXI_i_wstrb_o   )
+    ,.axi_i_bready_o  (AXI_i_bready_o  )
+    ,.axi_i_arvalid_o (AXI_i_arvalid_o )
+    ,.axi_i_araddr_o  (AXI_i_araddr_o  )
+    ,.axi_i_rready_o  (AXI_i_rready_o  )
+    ,.axi_t_awready_o (AXI_t_awready_o )
+    ,.axi_t_wready_o  (AXI_t_wready_o  )
+    ,.axi_t_bvalid_o  (AXI_t_bvalid_o  )
+    ,.axi_t_bresp_o   (AXI_t_bresp_o   )
+    ,.axi_t_bid_o     (AXI_t_bid_o     )
+    ,.axi_t_arready_o (AXI_t_arready_o )
+    ,.axi_t_rvalid_o  (AXI_t_rvalid_o  )
+    ,.axi_t_rdata_o   (AXI_t_rdata_o   )
+    ,.axi_t_rresp_o   (AXI_t_rresp_o   )
+    ,.axi_t_rid_o     (AXI_t_rid_o     )
+    ,.axi_t_rlast_o   (AXI_t_rlast_o   )
 
-    .axi_d_awvalid_o  (AXI_d_awvalid),    
-    .axi_d_awaddr_o   (AXI_d_awaddr),   
-    .axi_d_awid_o     (AXI_d_awid), 
-    .axi_d_awlen_o    (AXI_d_awlen),  
-    .axi_d_awburst_o  (AXI_d_awburst),    
-    .axi_d_wvalid_o   (AXI_d_wvalid),   
-    .axi_d_wdata_o    (AXI_d_wdata),  
-    .axi_d_wstrb_o    (AXI_d_wstrb),  
-    .axi_d_wlast_o    (AXI_d_wlast),  
-    .axi_d_bready_o   (AXI_d_bready),   
-    .axi_d_arvalid_o  (AXI_d_arvalid),    
-    .axi_d_araddr_o   (AXI_d_araddr),   
-    .axi_d_arid_o     (AXI_d_arid), 
-    .axi_d_arlen_o    (AXI_d_arlen),  
-    .axi_d_arburst_o  (AXI_d_arburst),    
-    .axi_d_rready_o   (AXI_d_rready)   
+
+
+    // instruction write
+    ,.tb_inst_we_i    (tb_inst_we_i    )
+    ,.tb_inst_addr_i  (tb_inst_addr_i  )
+    ,.tb_inst_data_i  (tb_inst_data_i  )
 );
 
 
@@ -212,17 +193,17 @@ task INIT_MEM_WRITE;
   input [31:0] req_pc;
   input [31:0] req_instruction;
   begin
-    AXI_reset_vector          = 32'h0000_0000;
+    // AXI_reset_vector          = 32'h0000_2000;
 
-    in_req_enable             = 1'b1;
-    AXI_i_rvalid              = 1'b1;
-    AXI_i_rdata               = req_instruction;
-    in_req_addr               = req_pc;
+    tb_inst_we_i           = 4'hf;
+    tb_inst_addr_i         = req_pc;
+    tb_inst_data_i         = req_instruction;
     wait_clocks(1);
-    in_req_enable             = 'b0;
-    AXI_i_rvalid              = 'b0;
-    AXI_i_rdata               = 'b0;
-    in_req_addr               = 'b0;
+    tb_inst_we_i           = 4'b0;
+    //in_req_enable             = 'b0;
+    //AXI_i_rvalid              = 'b0;
+    //AXI_i_rdata               = 'b0;
+    //in_req_addr               = 'b0;
   end
 endtask
 
@@ -236,11 +217,15 @@ endtask
    for( j =0; j< TRACE_SIZE; j=j+1) begin 
    INIT_MEM_WRITE(in_addr[j], in_inst[j]);
    end
-   wait_clocks(10);
+   wait_clocks(1);
 
  	 $display ("Request enqueue end!");
-   wait_clocks(10);
-   $finish();
+   wait_clocks(1);
+   $display ("Core reset");
+   rst_cpu_i = 1'b1;
+   wait_clocks(1);
+   rst_cpu_i = 1'b0;
+   //$finish();
 end
 
 

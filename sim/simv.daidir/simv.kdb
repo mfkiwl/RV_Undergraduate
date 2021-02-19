@@ -1,0 +1,9 @@
+rc file Version 1.0
+
+[Design]
+COMPILE_PATH=/home/uho/workspace/RISCV_RTL_SIM/sim
+SystemC=FALSE
+UUM=FALSE
+KDB=FALSE
+USE_NOVAS_HOME=FALSE
+TOP=tb_tcm_riscv_top riscv_trace_sim dport_axi dport_mux 

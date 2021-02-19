@@ -25,7 +25,6 @@
 ../rtl/top_src/cache_src_v/dcache_mux.v
 ../rtl/top_src/cache_src_v/dcache_pmem_mux.v
 ../rtl/top_src/cache_src_v/dcache.v
-../rtl/top_src/cache_src_v/dcache_pmem_mux.v
 ../rtl/top_src/cache_src_v/icache_data_ram.v
 ../rtl/top_src/cache_src_v/icache_tag_ram.v
 ../rtl/top_src/cache_src_v/icache.v
@@ -57,6 +56,7 @@
 ../rtl/top_src/tcm_src_v/tcm_mem.v
 
 // top
+//../rtl/top_src/tcm_src_v/riscv_tcm_top.v
 ../rtl/top_src/tcm_src_v/riscv_tcm_w_cache_top.v
 
 

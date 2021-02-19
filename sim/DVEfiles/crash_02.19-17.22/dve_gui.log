@@ -1,0 +1,243 @@
+The file '/home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd' was opened successfully.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+The file '/home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd' was opened successfully.
+.sdb'
+'
+'
+'
+.sdb'
+The file '/home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd' was opened successfully.
+Error: [DVAP037] 
+Errors while sourcing the file '/home/uho/workspace/RISCV_RTL_SIM/sim/DVEfiles/session.tcl':
+
+ Line 214: [DVSG007] 
+Signal ' "tb_tcm_riscv_top.UUT_RISCV_SOC.reset_vector_i"' cannot be found..
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+The file '/home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd' was opened successfully.
+The file '/home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd' was opened successfully.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+The file '/home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd' was opened successfully.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+dve> 
+dve> 
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+The file '/home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd' was opened successfully.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+The file '/home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd' was opened successfully.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+The file '/home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd' was opened successfully.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+The file '/home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd' was opened successfully.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+The file '/home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd' was opened successfully.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+Warning: [DVMF026] 
+The bottom has been reached.
+Continuing to search from top.
+The file '/home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd' was opened successfully.
+The file '/home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd' was opened successfully.
+---------------------------------------------
+
+The tool has just detected a severe internal error:
+
+SEGV exception handled in internal functions.
+
+
+Release = 'K-2015.09-SP1_Full64'  Architecture = 'amd64'  Program = 'DVE'
+
+'33090154 33127706 33129758 230785492336 -4265852416'
+
+---------------------------------------------
+=======================DVE Context and Call Stack=========================
+
+An unexpected termination has occurred in /usr/synopsys/vcs_vK-2015.09-SP1/gui/dve/linux64/bin/dve.exeHostname hades
+
+During Getting value change data. 
+VPD API Function hfGetAllValueChanges Handle1="/home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd" 
+Command line: /usr/synopsys/vcs_vK-2015.09-SP1/gui/dve/linux64/bin/dve.exe -full64
+
+--- Stack trace follows:
+[New LWP 24512]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+0x00000035bbeac8dd in waitpid () from /lib64/libc.so.6
+
+Thread 2 (Thread 0x7f68634f5700 (LWP 24512)):
+#0  0x00000035bc20ba5e in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000028b422b in ?? ()
+#2  0x00000000028b46be in QThread::msleep(unsigned long) ()
+#3  0x00000000010d9ee6 in ag::dveXThread::run() ()
+#4  0x00000000028b43ba in QThreadInstance::start(void*) ()
+#5  0x00000035bc207aa1 in start_thread () from /lib64/libpthread.so.0
+#6  0x00000035bbee8c4d in clone () from /lib64/libc.so.6
+
+Thread 1 (Thread 0x7f6863704800 (LWP 24275)):
+#0  0x00000035bbeac8dd in waitpid () from /lib64/libc.so.6
+#1  0x00000035bbe3e4e9 in do_system () from /lib64/libc.so.6
+#2  0x00000035bbe3e820 in system () from /lib64/libc.so.6
+#3  0x00007f68651f7fd8 in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313e639d2928478c79b3f673f99203bcf8be64600612100082236bffb2007f1e0ef9 () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/liberrorinf.so
+#4  0x00007f68651f856d in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313e81c34e9ac4c8988ef4a6e067b3aa9271e9f15440f9e8f69ebc77e2fd65860faa () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/liberrorinf.so
+#5  0x00007f68651f987b in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313efba706aab251478fa49e66610e453774633a6c152e7ef778f2202cda681f3d4e () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/liberrorinf.so
+#6  0x00007f68651f2645 in SNPSle_d35ca1ff70d465c2b9b1a72eee90a506fdd009d3de3db1de () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/liberrorinf.so
+#7  0x0000000001f97cc5 in ag::logErrorMessage(ag::errorType, QString const&, bool) ()
+#8  0x0000000001f9851e in ?? ()
+#9  <signal handler called>
+#10 0x00007f68655db63e in SNPSle_f056a393078742c4d11e51521a97ef496aac65c0cdc113a1fe74ba18cb0a74cb5ee1fa43fef03cf5dfe80359503bbef8bd6e362658f9775d0cd02df55bc9345b0d32df7e4b90a422 () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libhflib.so
+#11 0x00007f68655db8b6 in SNPSle_f056a393078742c4d11e51521a97ef499e06d4e1f917957cc4ecb9c3cdc1b487e5eb3aa03ccffc247782f6ee263fb6bc () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libhflib.so
+#12 0x00007f68655de4e7 in SNPSle_f056a393078742c4d11e51521a97ef499e06d4e1f917957cf879e64c0d999cbd520c1a1b55123ef104ee4b5e881fb38915784df9b2181adb957c143845a64893 () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libhflib.so
+#13 0x00007f68655e1054 in SNPSle_f056a393078742c4d11e51521a97ef496aac65c0cdc113a1b9e6d93405ba9307670bdcb60cfc43d73b407aa63055cd7958d581a41d37f3cd0d6bedf3db0d8c058e41723d7306e919 () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libhflib.so
+#14 0x00007f68655e2b28 in SNPSle_6cb76418efb0360d8d7d419662bd2bbcdfaac03e2c90c60c1202b373f215ac86ca3aa18e7c540e5c () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libhflib.so
+#15 0x00007f6865533813 in SNPSle_2d2fd458016b4009011b4e28906103fe712061cee1af8d676925e032a6577046d8aa7dcfaf35c99b2540df69eb8651bfd2f2a294d9965800a7d42d46846942d0 () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libhflib.so
+#16 0x00007f6865532041 in SNPSle_2d2fd458016b4009af76528cec81dc92464dd1946d17e1c679d1297221c58f43d3e48f9c07e6ba307d0216abfbb5edd2a616e5b8569c9d94b19a2fd39867fc683426945a9685742d () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libhflib.so
+#17 0x00007f686553429c in SNPSle_2d2fd458016b4009d9c2da862f3ec60964c10ad489c4ed1683271e334fc97001d0c42cc84f9845a68b16e0df8e55ddc718bc69b76848afb7 () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libhflib.so
+#18 0x00007f6865547276 in SNPSle_b89b497d83434013ca8ef4546be41d4f8e81d692867f7cf8ace62d1d8dc523615430861e8930d2b7c0980192e2ca3a7504d272917cbcc75be80b5439c24b5b4996f4f33865c6c3c1cd7a858a426e20a2 () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libhflib.so
+#19 0x00007f68655340f4 in SNPSle_2d2fd458016b4009d9c2da862f3ec60954ca5b382de0cc0f3667f486be0832e90c920dedd6aed15014f4dea070ac75b2 () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libhflib.so
+#20 0x00007f6865529946 in SNPSle_2d2fd458016b4009385e3f2300263f9516706218afc2485311afa5ce774981638ba6090ca8c60e6bb8f3f9601f1e2c6bd5b9c50faaa605ac () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libhflib.so
+#21 0x00007f68655299cb in SNPSle_2d2fd458016b400926d35b07534286925b1f2cfa3c41f66aa6b8d1d54d429d6df27b60c7a2343a1a3f734e27b7eb738e () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libhflib.so
+#22 0x00007f686553e907 in SNPSle_2d2fd458016b4009011b4e28906103fefb0bf8c59f9eac83bab5bf55ff3c12c86293d2e1da95def25f7009d64159551c () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libhflib.so
+#23 0x00007f6865555b8a in SNPSle_165d4d9402b8dbfcb5997b04b0417ef430df4acca5e787f25f8398d113b6fe44f6e35105e369f782a947252fa24b4f19 () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libhflib.so
+#24 0x00007f6865588b92 in SNPSle_d67416c53d71f956fec3ceb78ea1dd9d5548ff1689b64592f2d5841f4fad0e7050a0f0201e2e47308e2b4a290d7026ba2be3365d98bc17f2 () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libhflib.so
+#25 0x00007f686558bb5d in SNPSle_d6972e44ac25680ca1cd742f9e58638c74256b2a1c9f7448473a2264f1ecb0a519954e96ce49d24b461f3080c703326e () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libhflib.so
+#26 0x00007f686558cf30 in SNPSle_27f1105ca81d10ba4d42387f02fcff08a0beb818466a4896828a5892e9c944eaa00f3924d71b537d () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libhflib.so
+#27 0x00007f686556714a in SNPSle_acc57c9607680358ce3ae7b10b649e15f8b6b15bcb00ec1e3e2a8fcf257b94381e1872f4b336bda23f4c2c75f6e9f9cd () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libhflib.so
+#28 0x00007f686556c494 in SNPSle_6f4d827c9f771681d2add2baf05324fabea8f87e1a132b4a () from /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libhflib.so
+#29 0x0000000001d3a5f8 in ag::hfAspectValueChangeDb::getAllValueChanges() const ()
+#30 0x0000000001b830f1 in ag::valLoaderList::loadAllValues() ()
+#31 0x0000000001bfdc2a in ag::metaDesign::loadAllValues(bool) ()
+#32 0x00000000010dd189 in ag::ovaAppInst::loadValues(bool) ()
+#33 0x000000000199c47c in ag::waveListView::evaluateVisibleItems() ()
+#34 0x000000000199298f in ag::waveListView::processViewportChanged() ()
+#35 0x00000000019a6cd4 in ag::waveListView::drawContentsOffset(QPainter*, int, int, int, int, int, int) ()
+#36 0x00000000029e3469 in QScrollView::viewportPaintEvent(QPaintEvent*) ()
+#37 0x00000000029e7816 in QScrollView::eventFilter(QObject*, QEvent*) ()
+#38 0x00000000029c7166 in QListView::eventFilter(QObject*, QEvent*) ()
+#39 0x00000000018aef32 in ag::baseListView::eventFilter(QObject*, QEvent*) ()
+#40 0x00000000019a360b in ag::waveListView::eventFilter(QObject*, QEvent*) ()
+#41 0x00000000029061a0 in QObject::activate_filters(QEvent*) ()
+#42 0x0000000002906229 in QObject::event(QEvent*) ()
+#43 0x000000000293205a in QWidget::event(QEvent*) ()
+#44 0x00000000028ba975 in QApplication::internalNotify(QObject*, QEvent*) ()
+#45 0x00000000028bab7f in QApplication::notify(QObject*, QEvent*) ()
+#46 0x000000000200b7b6 in EkExtQtApp::notify(QObject*, QEvent*) ()
+#47 0x0000000001fdde1d in ag::baseQtApp::notify(QObject*, QEvent*) ()
+#48 0x0000000002897688 in QWidget::repaint(QRegion const&, bool) ()
+#49 0x00000000028bb8c0 in QApplication::sendPostedEvents(QObject*, int) ()
+#50 0x000000000287d160 in QEventLoop::processEvents(unsigned int) ()
+#51 0x000000000111b751 in ag::ovaEventLoop::processEvents(unsigned int) ()
+#52 0x00000000028cab69 in QEventLoop::enterLoop() ()
+#53 0x00000000028caaca in QEventLoop::exec() ()
+#54 0x000000000111b0bf in run_cci_event_loop ()
+#55 0x00000000010daab4 in ag::ovaAppInst::enterEventLoop(int, char**) ()
+#56 0x0000000000de3aa9 in main ()
+Completed context dump phase data 'VPD API Function'
+==========================================================================

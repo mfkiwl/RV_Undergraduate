@@ -9,7 +9,7 @@ Command: vcs +define+WAVE_DUMP_VCS+RTL_SIM +libext+.v -full64 -v2005 -R -timesca
 +define+VCS -l vcs.log -debug_all -sverilog -file vlist_Device_top -ucli -do dump.tcl \
 +vpdfile+dump/Dev_top_test.vpd
                          Chronologic VCS (TM)
-       Version K-2015.09-SP1_Full64 -- Fri Feb 19 12:13:48 2021
+       Version K-2015.09-SP1_Full64 -- Fri Feb 19 18:27:27 2021
                Copyright (c) 1991-2015 by Synopsys Inc.
                          ALL RIGHTS RESERVED
 
@@ -27,21 +27,171 @@ Parsing design file '../rtl/top_src/cache_src_v/dcache_if_pmem.v'
 Parsing design file '../rtl/top_src/cache_src_v/dcache_mux.v'
 Parsing design file '../rtl/top_src/cache_src_v/dcache_pmem_mux.v'
 Parsing design file '../rtl/top_src/cache_src_v/dcache.v'
-Parsing design file '../rtl/top_src/cache_src_v/dcache_pmem_mux.v'
-
-Error-[MPD] Module previously declared
-  The module was previously declared at: 
-  "../rtl/top_src/cache_src_v/dcache_pmem_mux.v", 45
-  It is redeclared later at:
-  "../rtl/top_src/cache_src_v/dcache_pmem_mux.v", 45: token is 
-  'dcache_pmem_mux'
-  module dcache_pmem_mux
-                        ^
-  Please remove one of the declarations and compile again.
-
 Parsing design file '../rtl/top_src/cache_src_v/icache_data_ram.v'
 Parsing design file '../rtl/top_src/cache_src_v/icache_tag_ram.v'
 Parsing design file '../rtl/top_src/cache_src_v/icache.v'
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 104
+  Redeclaration of ANSI ports not allowed for 'axi_awready_i', this will be an
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 105
+  Redeclaration of ANSI ports not allowed for 'axi_wready_i', this will be an 
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 106
+  Redeclaration of ANSI ports not allowed for 'axi_bvalid_i', this will be an 
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 107
+  Redeclaration of ANSI ports not allowed for 'axi_bresp_i', this will be an 
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 108
+  Redeclaration of ANSI ports not allowed for 'axi_bid_i', this will be an 
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 109
+  Redeclaration of ANSI ports not allowed for 'axi_arready_i', this will be an
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 110
+  Redeclaration of ANSI ports not allowed for 'axi_rvalid_i', this will be an 
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 111
+  Redeclaration of ANSI ports not allowed for 'axi_rdata_i', this will be an 
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 112
+  Redeclaration of ANSI ports not allowed for 'axi_rresp_i', this will be an 
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 113
+  Redeclaration of ANSI ports not allowed for 'axi_rid_i', this will be an 
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 114
+  Redeclaration of ANSI ports not allowed for 'axi_rlast_i', this will be an 
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 118
+  Redeclaration of ANSI ports not allowed for 'axi_awvalid_o', this will be an
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 119
+  Redeclaration of ANSI ports not allowed for 'axi_awaddr_o', this will be an 
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 120
+  Redeclaration of ANSI ports not allowed for 'axi_awid_o', this will be an 
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 121
+  Redeclaration of ANSI ports not allowed for 'axi_awlen_o', this will be an 
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 122
+  Redeclaration of ANSI ports not allowed for 'axi_awburst_o', this will be an
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 123
+  Redeclaration of ANSI ports not allowed for 'axi_wvalid_o', this will be an 
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 124
+  Redeclaration of ANSI ports not allowed for 'axi_wdata_o', this will be an 
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 125
+  Redeclaration of ANSI ports not allowed for 'axi_wstrb_o', this will be an 
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 126
+  Redeclaration of ANSI ports not allowed for 'axi_wlast_o', this will be an 
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 127
+  Redeclaration of ANSI ports not allowed for 'axi_bready_o', this will be an 
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 128
+  Redeclaration of ANSI ports not allowed for 'axi_arvalid_o', this will be an
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 129
+  Redeclaration of ANSI ports not allowed for 'axi_araddr_o', this will be an 
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 130
+  Redeclaration of ANSI ports not allowed for 'axi_arid_o', this will be an 
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 131
+  Redeclaration of ANSI ports not allowed for 'axi_arlen_o', this will be an 
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 132
+  Redeclaration of ANSI ports not allowed for 'axi_arburst_o', this will be an
+  error in a future release
+
+
+Warning-[IPDASP] Identifier in ANSI port declaration
+../rtl/top_src/cache_src_v/icache.v, 133
+  Redeclaration of ANSI ports not allowed for 'axi_rready_o', this will be an 
+  error in a future release
+
 Parsing design file '../rtl/top_src/core/riscv_alu.v'
 Parsing included file '../rtl/top_src/core/riscv_defs.v'.
 Back to file '../rtl/top_src/core/riscv_alu.v'.
@@ -91,5 +241,81 @@ Parsing design file '../rtl/top_src/tcm_src_v/tcm_mem_pmem.v'
 Parsing design file '../rtl/top_src/tcm_src_v/tcm_mem_ram.v'
 Parsing design file '../rtl/top_src/tcm_src_v/tcm_mem.v'
 Parsing design file '../rtl/top_src/tcm_src_v/riscv_tcm_w_cache_top.v'
-1 error
-CPU time: .101 seconds to compile
+
+Warning-[IPDW] Identifier previously declared
+../rtl/top_src/tcm_src_v/riscv_tcm_w_cache_top.v, 182
+  Second declaration for identifier 'cpu_id_w' ignored
+
+Top Level Modules:
+       tb_tcm_riscv_top
+       riscv_trace_sim
+       dport_axi
+       dport_mux
+TimeScale is 1 ns / 10 ps
+
+Warning-[TFIPC] Too few instance port connections
+../rtl/top_src/tcm_src_v/riscv_tcm_w_cache_top.v, 390
+"tcm_mem u_tcm( .clk_i (clk_i),  .rst_i (rst_i),  .mem_i_rd_i (ifetch_rd_w),  .mem_i_flush_i (ifetch_flush_w),  .mem_i_invalidate_i (ifetch_invalidate_w),  .mem_i_pc_i (ifetch_pc_w),  .mem_d_addr_i (dport_tcm_addr_w),  .mem_d_data_wr_i (dport_tcm_data_wr_w),  .mem_d_rd_i (dport_tcm_rd_w),  .mem_d_wr_i (dport_tcm_wr_w),  .mem_d_cacheable_i (dport_tcm_cacheable_w),  .mem_d_req_tag_i (dport_tcm_req_tag_w),  .mem_d_invalidate_i (dport_tcm_invalidate_w),  .mem_d_writeback_i (dport_tcm_writeback_w),  .mem_d_flush_i (dport_tcm_flush_w),  .axi_awvalid_i (AXI_c_awvalid),  .axi_awaddr_i (AXI_c_awaddr),  .axi_awid_i (AXI_c_awid),  .axi_awlen_i (AXI_c_awlen),  .axi_awburst_i (AXI_c_awburst),  .axi_wvalid_i (AXI_c_wvalid),  .axi_wdata_i (AXI_c_wdata),  .axi_wstrb_i ( ... "
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[PCWM-W] Port connection width mismatch
+../rtl/top_src/cache_src_v/dcache_axi.v, 198
+"dcache_axi_axi u_axi( .clk_i (clk_i),  .rst_i (rst_i),  .inport_valid_i (req_can_issue_w),  .inport_write_i (req_is_write_w),  .inport_wdata_i (req_w[63:32]),  .inport_wstrb_i (req_w[67:64]),  .inport_addr_i ({req_w[31:2], 2'b0}),  .inport_id_i (AXI_ID),  .inport_len_i (req_len_w),  .inport_burst_i (2'b1),  .inport_accept_o (accept_w),  .inport_bready_i (1'b1),  .inport_rready_i (1'b1),  .inport_bvalid_o (bvalid_w),  .inport_bresp_o (bresp_w),  .inport_rvalid_o (rvalid_w),  .inport_rdata_o (inport_read_data_o),  .inport_rresp_o (rresp_w),  .outport_awvalid_o (outport_awvalid_o),  .outport_awaddr_o (outport_awaddr_o),  .outport_awid_o (outport_awid_o),  .outport_awlen_o (outport_awlen_o),  .outport_awburst_o (outport_awburst_o),  .outport_wvalid_o (outpo ... "
+  The following 32-bit expression is connected to 4-bit port "inport_id_i" of 
+  module "dcache_axi_axi", instance "u_axi".
+  Expression: AXI_ID
+  	use +lint=PCWM for more details
+
+
+Warning-[PCWM-W] Port connection width mismatch
+../rtl/top_src/tcm_src_v/riscv_tcm_w_cache_top.v, 238
+"riscv_core #(, , , , , , , MEM_CACHE_ADDR_MIN, MEM_CACHE_ADDR_MAX) u_core( .clk_i (clk_i),  .rst_i (rst_i),  .mem_d_data_rd_i (dcache_data_rd_w),  .mem_d_accept_i (dcache_accept_w),  .mem_d_ack_i (dcache_ack_w),  .mem_d_error_i (dcache_error_w),  .mem_d_resp_tag_i (dcache_resp_tag_w),  .mem_i_accept_i (icache_accept_w),  .mem_i_valid_i (icache_valid_w),  .mem_i_error_i (icache_error_w),  .mem_i_inst_i (icache_inst_w),  .intr_i (intr_i),  .reset_vector_i (boot_vector_w),  .cpu_id_i (cpu_id_w),  .mem_d_addr_o (dcache_addr_w),  .mem_d_data_wr_o (dcache_data_wr_w),  .mem_d_rd_o (dcache_rd_w),  .mem_d_wr_o (dcache_wr_w),  .mem_d_cacheable_o (dcache_cacheable_w),  .mem_d_req_tag_o (dcache_req_tag_w),  .mem_d_invalidate_o (dcache_invalidate_w),  .mem_d_writeba ... "
+  The following 32-bit expression is connected to 1-bit port "intr_i" of 
+  module "riscv_core", instance "u_core".
+  Expression: intr_i
+  	use +lint=PCWM for more details
+
+Starting vcs inline pass...
+16 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+make[1]: Entering directory `/home/uho/workspace/RISCV_RTL_SIM/sim/csrc'
+rm -f _csrc*.so linux64_scvhdl_*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod -x ../simv; fi
+g++  -o ../simv   -Wl,-rpath-link=./ -Wl,-rpath='$ORIGIN'/simv.daidir/ -Wl,-rpath=./simv.daidir/ \
+-Wl,-rpath='$ORIGIN'/simv.daidir//scsim.db.dir  -rdynamic   amcQwB.o objs/amcQw_d.o \
+_prev_archive_1.so  SIM_l.o       rmapats_mop.o rmapats.o rmar.o  rmar_llvm_0_1.o \
+rmar_llvm_0_0.o          /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libzerosoft_rt_stubs.so \
+/usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libvirsim.so /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/liberrorinf.so \
+/usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libsnpsmalloc.so    /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libvcsnew.so \
+/usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libsimprofile.so /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libuclinative.so \
+-Wl,-whole-archive /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libvcsucli.so -Wl,-no-whole-archive \
+/usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm \
+-lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/home/uho/workspace/RISCV_RTL_SIM/sim/csrc'
+Command: ./simv +define+WAVE_DUMP_VCS+RTL_SIM +libext+.v +define+VCS -a vcs.log -ucli -do dump.tcl +vpdfile+dump/Dev_top_test.vpd
+Chronologic VCS simulator copyright 1991-2015
+Contains Synopsys proprietary information.
+Compiler version K-2015.09-SP1_Full64; Runtime version K-2015.09-SP1_Full64;  Feb 19 18:27 2021
+Message: From $vcdpluson at time 0 in file ./testbench.v line 3: [VCD+-SVFN]: 
+Setting VPD File by "+vpdfile+" switch to dump/Dev_top_test.vpd.
+
+ucli% dump -aggregates -add /
+VCD+ Writer K-2015.09-SP1_Full64 Copyright (c) 1991-2015 by Synopsys Inc.
+1
+ucli% run 100us
+File Read Done!
+Request enqueue start!
+Reset disable... Simulation Start !!! 
+Request enqueue end!
+Core reset
+100000000 ps
+ucli% exit
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 100000000 ps
+CPU Time:      0.290 seconds;       Data structure size:   0.1Mb
+Fri Feb 19 18:27:30 2021
+CPU time: .841 seconds to compile + .272 seconds to elab + .081 seconds to link + .389 seconds in simulation

@@ -47,8 +47,8 @@ module riscv_tcm_top
 // Params
 //-----------------------------------------------------------------
 #(
-      parameter BOOT_VECTOR      = 32'h00000000
-     //parameter BOOT_VECTOR      = 32'h00002000
+     parameter BOOT_VECTOR      = 32'h00000000
+    //  parameter BOOT_VECTOR      = 32'h00002000
     ,parameter CORE_ID          = 0
     ,parameter TCM_MEM_BASE     = 0
     ,parameter MEM_CACHE_ADDR_MIN = 0
@@ -172,19 +172,45 @@ wire           dport_accept_w;
 
 
 
+wire           icache_valid_w;
+wire           icache_flush_w;
+wire           dcache_flush_w;
+wire           dcache_invalidate_w;
+wire           dcache_ack_w;
+wire  [ 10:0]  dcache_resp_tag_w;
+wire  [ 31:0]  icache_inst_w;
+wire  [ 31:0]  cpu_id_w = CORE_ID;
+wire           dcache_rd_w;
+wire  [ 31:0]  dcache_addr_w;
+wire           dcache_accept_w;
+wire           icache_invalidate_w;
+wire           dcache_writeback_w;
+wire  [ 10:0]  dcache_req_tag_w;
+wire           dcache_cacheable_w;
+wire           icache_error_w;
+wire  [ 31:0]  dcache_data_rd_w;
+wire           icache_accept_w;
+wire  [  3:0]  dcache_wr_w;
+wire  [ 31:0]  icache_pc_w;
+wire           icache_rd_w;
+wire           dcache_error_w;
+wire  [ 31:0]  dcache_data_wr_w;
+
+
+
 
 //AXI in (cache perspective)
-reg           AXI_c_awready     ;
-reg           AXI_c_wready      ;
-reg           AXI_c_bvalid      ;
-reg  [  1:0]  AXI_c_bresp       ;
-reg  [  3:0]  AXI_c_bid         ;
-reg           AXI_c_arready     ;
-reg           AXI_c_rvalid      ;
-reg  [ 31:0]  AXI_c_rdata       ;
-reg  [  1:0]  AXI_c_rresp       ;  
-reg  [  3:0]  AXI_c_rid         ;
-reg           AXI_c_rlast       ;
+wire           AXI_c_awready     ;
+wire           AXI_c_wready      ;
+wire           AXI_c_bvalid      ;
+wire  [  1:0]  AXI_c_bresp       ;
+wire  [  3:0]  AXI_c_bid         ;
+wire           AXI_c_arready     ;
+wire           AXI_c_rvalid      ;
+wire  [ 31:0]  AXI_c_rdata       ;
+wire  [  1:0]  AXI_c_rresp       ;  
+wire  [  3:0]  AXI_c_rid         ;
+wire           AXI_c_rlast       ;
 
 //AXI out (cache perspective)
 wire          AXI_c_awvalid     ;
@@ -224,7 +250,8 @@ u_core
     ,.mem_i_error_i(icache_error_w)
     ,.mem_i_inst_i(icache_inst_w)
     ,.intr_i(intr_i)
-    ,.reset_vector_i(reset_vector_i)
+    ,.reset_vector_i(boot_vector_w)
+    // ,.reset_vector_i(reset_vector_i)
     ,.cpu_id_i(cpu_id_w)
 
     
@@ -266,17 +293,17 @@ u_dcache
     ,.mem_flush_i(dcache_flush_w)
 
     // AXI INPUT
-    ,.axi_awready_i (AXI_c_awready      )
-    ,.axi_wready_i  (AXI_c_wready       )
-    ,.axi_bvalid_i  (AXI_c_bvalid       )
-    ,.axi_bresp_i   (AXI_c_bresp        )
-    ,.axi_bid_i     (AXI_c_bid          )
-    ,.axi_arready_i (AXI_c_arready      )
-    ,.axi_rvalid_i  (AXI_c_rvalid       )
-    ,.axi_rdata_i   (AXI_c_rdata        )
-    ,.axi_rresp_i   (AXI_c_rresp        )
-    ,.axi_rid_i     (AXI_c_rid          )
-    ,.axi_rlast_i   (AXI_c_rlast        )
+    ,.axi_awready_i ()
+    ,.axi_wready_i  ()
+    ,.axi_bvalid_i  ()
+    ,.axi_bresp_i   ()
+    ,.axi_bid_i     ()
+    ,.axi_arready_i ()
+    ,.axi_rvalid_i  ()
+    ,.axi_rdata_i   ()
+    ,.axi_rresp_i   ()
+    ,.axi_rid_i     ()
+    ,.axi_rlast_i   ()
 
     // Outputs
     ,.mem_data_rd_o (dcache_data_rd_w)
@@ -286,22 +313,22 @@ u_dcache
     ,.mem_resp_tag_o(dcache_resp_tag_w)
 
     // AXI OUTPUT
-    ,.axi_awvalid_o (AXI_c_awvalid      )
-    ,.axi_awaddr_o  (AXI_c_awaddr       )
-    ,.axi_awid_o    (AXI_c_awid         )
-    ,.axi_awlen_o   (AXI_c_awlen        )
-    ,.axi_awburst_o (AXI_c_awburst      )
-    ,.axi_wvalid_o  (AXI_c_wvalid       )
-    ,.axi_wdata_o   (AXI_c_wdata        )
-    ,.axi_wstrb_o   (AXI_c_wstrb        )
-    ,.axi_wlast_o   (AXI_c_wlast        )
-    ,.axi_bready_o  (AXI_c_bready       )
-    ,.axi_arvalid_o (AXI_c_arvalid      )
-    ,.axi_araddr_o  (AXI_c_araddr       )
-    ,.axi_arid_o    (AXI_c_arid         )
-    ,.axi_arlen_o   (AXI_c_arlen        )
-    ,.axi_arburst_o (AXI_c_arburst      )
-    ,.axi_rready_o  (AXI_c_rready       )
+    ,.axi_awvalid_o ()
+    ,.axi_awaddr_o  ()
+    ,.axi_awid_o    ()
+    ,.axi_awlen_o   ()
+    ,.axi_awburst_o ()
+    ,.axi_wvalid_o  ()
+    ,.axi_wdata_o   ()
+    ,.axi_wstrb_o   ()
+    ,.axi_wlast_o   ()
+    ,.axi_bready_o  ()
+    ,.axi_arvalid_o ()
+    ,.axi_araddr_o  ()
+    ,.axi_arid_o    ()
+    ,.axi_arlen_o   ()
+    ,.axi_arburst_o ()
+    ,.axi_rready_o  ()
 );
 
 
