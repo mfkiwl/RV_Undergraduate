@@ -1,0 +1,63 @@
+//------------------------------------------------------------------------------
+//	Test Bench
+//------------------------------------------------------------------------------
+./testbench.v
+
+//param
+//../rtl/param/riscv_defs.vh
+
+//==============================================================================
+//===== RTL =====
+//==============================================================================
+// TOP
+// not working
+// ../rtl/riscv_defs.v
+// Instead
++incdir+../rtl/top_src/core
+
+// cache
+../rtl/top_src/cache_src_v/dcache_axi_axi.v
+../rtl/top_src/cache_src_v/dcache_axi.v
+../rtl/top_src/cache_src_v/dcache_core_data_ram.v
+../rtl/top_src/cache_src_v/dcache_core_tag_ram.v
+../rtl/top_src/cache_src_v/dcache_core.v
+../rtl/top_src/cache_src_v/dcache_if_pmem.v
+../rtl/top_src/cache_src_v/dcache_mux.v
+../rtl/top_src/cache_src_v/dcache_pmem_mux.v
+../rtl/top_src/cache_src_v/dcache.v
+../rtl/top_src/cache_src_v/dcache_pmem_mux.v
+../rtl/top_src/cache_src_v/icache_data_ram.v
+../rtl/top_src/cache_src_v/icache_tag_ram.v
+../rtl/top_src/cache_src_v/icache.v
+
+// core
+../rtl/top_src/core/riscv_alu.v
+../rtl/top_src/core/riscv_core.v
+../rtl/top_src/core/riscv_csr.v
+../rtl/top_src/core/riscv_csr_regfile.v
+../rtl/top_src/core/riscv_decode.v
+../rtl/top_src/core/riscv_decoder.v
+../rtl/top_src/core/riscv_divider.v
+../rtl/top_src/core/riscv_exec.v
+../rtl/top_src/core/riscv_fetch.v
+../rtl/top_src/core/riscv_issue.v
+../rtl/top_src/core/riscv_lsu.v
+../rtl/top_src/core/riscv_mmu.v
+../rtl/top_src/core/riscv_multiplier.v
+../rtl/top_src/core/riscv_pipe_ctrl.v
+../rtl/top_src/core/riscv_regfile.v
+../rtl/top_src/core/riscv_trace_sim.v
+../rtl/top_src/core/riscv_xilinx_2r1w.v
+
+// tcm
+../rtl/top_src/tcm_src_v/dport_axi.v
+../rtl/top_src/tcm_src_v/dport_mux.v
+../rtl/top_src/tcm_src_v/tcm_mem_pmem.v
+../rtl/top_src/tcm_src_v/tcm_mem_ram.v
+../rtl/top_src/tcm_src_v/tcm_mem.v
+
+// top
+../rtl/top_src/tcm_src_v/riscv_tcm_w_cache_top.v
+
+
+

@@ -1,0 +1,17 @@
+syntax: glob
+
+sim/LSTM_cell_test/200910*
+sim/simv.daidir
+sim/csrc
+sim/DVEfiles
+sim/*vpd.tcl
+sim/*.vpd
+sim/simv
+sim/*.txt
+sim/*.log
+sim/ucli.key
+sim/dump
+sim/AN.DB
+
+syn/*
+rtl/PIM_ALU_SYN_top.v
