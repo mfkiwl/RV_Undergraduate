@@ -30,7 +30,7 @@
 /home/uho/workspace/RISCV_RTL_SIM/rtl/top_src/core/riscv_xilinx_2r1w.v
 /home/uho/workspace/RISCV_RTL_SIM/rtl/top_src/tcm_src_v/dport_axi.v
 /home/uho/workspace/RISCV_RTL_SIM/rtl/top_src/tcm_src_v/dport_mux.v
-/home/uho/workspace/RISCV_RTL_SIM/rtl/top_src/tcm_src_v/riscv_decoupled_tcm.v
+/home/uho/workspace/RISCV_RTL_SIM/rtl/top_src/tcm_src_v/riscv_tcm_top.v
 /home/uho/workspace/RISCV_RTL_SIM/rtl/top_src/tcm_src_v/tcm_mem.v
 /home/uho/workspace/RISCV_RTL_SIM/rtl/top_src/tcm_src_v/tcm_mem_pmem.v
 /home/uho/workspace/RISCV_RTL_SIM/rtl/top_src/tcm_src_v/tcm_mem_ram.v

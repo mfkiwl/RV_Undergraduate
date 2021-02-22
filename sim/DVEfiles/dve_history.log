@@ -4,7 +4,7 @@ gui_create_pref_key -category {Globals} -key {load_detail_for_funcov} -value_typ
 # State setting overrides
 gui_state_default_create -off -ini
 gui_set_state_value -category Globals -key recent_databases -value {{gui_open_db -file /home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd -design V1} {gui_open_db -file /home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd -design V2}}
-gui_set_state_value -category Globals -key recent_sessions -value {{gui_load_session -ignore_errors -file /home/uho/workspace/RISCV_RTL_SIM/sim/DVEfiles//crash_02.19-17.22/dve_session02.19-17.22.tcl} {gui_load_session -ignore_errors -file /home/uho/workspace/RISCV_RTL_SIM/sim/DVEfiles//crash_02.19-14.53/dve_session02.19-14.53.tcl} {gui_load_session -ignore_errors -file /home/uho/workspace/RISCV_RTL_SIM/sim/DVEfiles//crash_02.19-14.01/dve_session02.19-14.01.tcl}}
+gui_set_state_value -category Globals -key recent_sessions -value {{gui_load_session -ignore_errors -file /home/uho/workspace/RISCV_RTL_SIM/sim/DVEfiles//crash_02.22-16.16/dve_session02.22-16.16.tcl} {gui_load_session -ignore_errors -file /home/uho/workspace/RISCV_RTL_SIM/sim/DVEfiles//crash_02.19-17.22/dve_session02.19-17.22.tcl} {gui_load_session -ignore_errors -file /home/uho/workspace/RISCV_RTL_SIM/sim/DVEfiles//crash_02.19-14.53/dve_session02.19-14.53.tcl} {gui_load_session -ignore_errors -file /home/uho/workspace/RISCV_RTL_SIM/sim/DVEfiles//crash_02.19-14.01/dve_session02.19-14.01.tcl}}
 gui_set_state_value -category Layout -key child_console_size_x -value 1853
 gui_set_state_value -category Layout -key child_console_size_y -value 175
 gui_set_state_value -category Layout -key child_data_coltype -value 76
@@ -65,62 +65,19 @@ gui_state_default_create -off
 # Begin command logging
 gui_open_db -file /home/uho/workspace/RISCV_RTL_SIM/sim/dump/Dev_top_test.vpd -design V1
 gui_list_set_filter -id Data.1 -text {*}
+gui_list_select -id Hier.1 -current_item_name dcache -current_item_type Scope  -selected  {  }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top -current_item_type Scope  -selected  { tb_tcm_riscv_top   }
 gui_list_expand -id  Hier.1   tb_tcm_riscv_top
 gui_list_expand -id  Hier.1   tb_tcm_riscv_top.UUT_RISCV_SOC
-gui_list_set_filter -id Data.1 -text {mem_addr*}
-gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.mem_addr_i[31:0]}   }
+gui_list_expand -id  Hier.1   tb_tcm_riscv_top.UUT_RISCV_SOC.u_core
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core   }
+gui_list_set_filter -id Data.1 -text {*mem_d*}
+gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_wr_o[31:0]}   }
+gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_wr_o[31:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]}   }
 gui_open_window Wave
-gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.mem_addr_i[31:0]} } -insertionbar
-gui_marker_move -id  Wave.1 C1 166
-gui_wv_scroll_hslidermove -id  Wave.1 1291
-gui_wv_scroll_hslidermove -id  Wave.1 3873
-gui_wv_scroll_hslidermove -id  Wave.1 7746
-gui_wv_scroll_hslidermove -id  Wave.1 9037
-gui_wv_scroll_hslidermove -id  Wave.1 10328
-gui_wv_scroll_hslidermove -id  Wave.1 16783
-gui_wv_scroll_hslidermove -id  Wave.1 18074
-gui_wv_scroll_hslidermove -id  Wave.1 24529
-gui_wv_scroll_hslidermove -id  Wave.1 23238
-gui_wv_scroll_hslidermove -id  Wave.1 21947
-gui_wv_scroll_hslidermove -id  Wave.1 20656
-gui_wv_scroll_hslidermove -id  Wave.1 19365
-gui_wv_scroll_hslidermove -id  Wave.1 18074
-gui_wv_scroll_hslidermove -id  Wave.1 16783
-gui_wv_scroll_hslidermove -id  Wave.1 15492
-gui_wv_scroll_hslidermove -id  Wave.1 14201
-gui_wv_scroll_hslidermove -id  Wave.1 15492
-gui_wv_scroll_hslidermove -id  Wave.1 16783
-gui_wv_scroll_hslidermove -id  Wave.1 18074
-gui_wv_scroll_hslidermove -id  Wave.1 16783
-gui_list_set_filter -id Data.1 -text {*pc*}
-gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_i_pc_o[31:0]}   }
-gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_i_pc_o[31:0]} } -insertionbar
-gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_i_pc_o[31:0]}   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after Group1 {{tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_i_pc_o[31:0]}}
-gui_list_select -id Wave.1 -selected  {  }
-gui_marker_move -id  Wave.1 C1 5803
-gui_wv_scroll_hslidermove -id  Wave.1 18074
-gui_wv_scroll_hslidermove -id  Wave.1 19365
-gui_wv_scroll_hslidermove -id  Wave.1 20656
-gui_wv_scroll_hslidermove -id  Wave.1 21947
-gui_wv_scroll_hslidermove -id  Wave.1 23238
-gui_wv_scroll_hslidermove -id  Wave.1 24529
-gui_wv_scroll_hslidermove -id  Wave.1 25820
-gui_wv_scroll_hslidermove -id  Wave.1 27111
-gui_wv_scroll_hslidermove -id  Wave.1 28402
-gui_wv_scroll_hslidermove -id  Wave.1 29693
-gui_wv_scroll_hslidermove -id  Wave.1 30984
-gui_wv_scroll_hslidermove -id  Wave.1 32275
-gui_wv_scroll_hslidermove -id  Wave.1 33566
-gui_wv_scroll_hslidermove -id  Wave.1 34857
-gui_wv_scroll_hslidermove -id  Wave.1 41312
-gui_wv_scroll_hslidermove -id  Wave.1 42603
-gui_wv_scroll_hslidermove -id  Wave.1 46476
-gui_wv_scroll_hslidermove -id  Wave.1 47767
-gui_wv_scroll_hslidermove -id  Wave.1 49058
-gui_wv_scroll_hslidermove -id  Wave.1 55513
-gui_wv_scroll_hslidermove -id  Wave.1 56804
-gui_wv_scroll_hslidermove -id  Wave.1 61968
+gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]} {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_wr_o[31:0]} } -insertionbar
+gui_wv_zoom_timerange -id  Wave.1 0 431
+gui_marker_move -id  Wave.1 C1 106
 gui_zoom -window Wave.1 -factor 0.5
 gui_zoom -window Wave.1 -factor 0.5
 gui_zoom -window Wave.1 -factor 0.5
@@ -130,115 +87,909 @@ gui_zoom -window Wave.1 -factor 0.5
 gui_zoom -window Wave.1 -factor 0.5
 gui_zoom -window Wave.1 -factor 0.5
 gui_zoom -window Wave.1 -factor 0.5
-gui_zoom -window Wave.1 -factor 0.5
-gui_zoom -window Wave.1 -factor 0.5
-gui_zoom -window Wave.1 -factor 2
-gui_marker_move -id  Wave.1 C1 282747
-gui_marker_move -id  Wave.1 C1 277972
-gui_zoom -window Wave.1 -factor 2
-gui_zoom -window Wave.1 -factor 2
 gui_zoom -window Wave.1 -factor 2
 gui_list_set_filter -id Data.1 -text {*clk*}
 gui_list_select -id Data.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.clk_i   }
 gui_list_add -id Wave.1 -from Data.1 { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.clk_i } -insertionbar
-gui_list_set_filter -id Data.1 -text {*data*}
-gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_rd_i[31:0]}   }
-gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_wr_o[31:0]}   }
-gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_wr_o[31:0]} } -insertionbar
-gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_wr_o[31:0]}   }
-gui_list_set_filter -id Data.1 -text {*addr*}
-gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]}   }
-gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]} } -insertionbar
-gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.mem_addr_i[31:0]}   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.clk_i {{tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.mem_addr_i[31:0]}} 
-gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]}   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_wr_o[31:0]} {{tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]}} 
-gui_list_select -id Wave.1 -selected  { {New Group}   }
-gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]}   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.mem_addr_i[31:0]} {{tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]}} 
+gui_list_select -id Data.1 -selected  {  }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm   }
+gui_list_set_filter -id Data.1 -text {*mem_*}
+gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_addr_i[31:0]}   }
+gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_data_wr_i[31:0]}   }
+gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_data_wr_i[31:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_addr_i[31:0]}   }
+gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_data_wr_i[31:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_addr_i[31:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_data_rd_o[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_addr_i[31:0]} {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_data_wr_i[31:0]} {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_data_rd_o[31:0]} } -insertionbar
+gui_marker_move -id  Wave.1 C1 100375
+gui_marker_move -id  Wave.1 C1 103355
+gui_wv_scroll_hslidermove -id  Wave.1 1293
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
 gui_marker_select -id  Wave.1 { C1 }
-gui_marker_move -id  Wave.1 C1 281046
-gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache   }
-gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.mem_addr_i[31:0]} } -insertionbar
-gui_list_set_filter -id Data.1 -text {*mem_addr*}
-gui_list_set_filter -id Data.1 -text {*mem_data*}
-gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.mem_data_wr_i[31:0]}   }
-gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.mem_data_wr_i[31:0]} } -insertionbar
-gui_list_set_filter -id Data.1 -text {*awaddr*}
-gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.axi_awaddr_o[31:0]}   }
-gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.axi_awaddr_o[31:0]} } -insertionbar
-gui_list_set_filter -id Data.1 -text {*wdata*}
-gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.axi_wdata_o[31:0]}   }
-gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.axi_wdata_o[31:0]} } -insertionbar
-gui_marker_move -id  Wave.1 C1 282709
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 109000
+gui_list_set_filter -id Data.1 -text {*reg*}
+gui_list_expand -id  Data.1   {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.SUPPORT_REGFILE_XILINX[31:0]}
+gui_list_collapse -id  Data.1   {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.SUPPORT_REGFILE_XILINX[31:0]}
+gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.SUPPORT_REGFILE_XILINX[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.SUPPORT_REGFILE_XILINX[31:0]} } -insertionbar
+gui_list_expand -id  Wave.1   {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.SUPPORT_REGFILE_XILINX[31:0]}
+gui_list_collapse -id  Wave.1   {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.SUPPORT_REGFILE_XILINX[31:0]}
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.SUPPORT_REGFILE_XILINX[31:0]}   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_data_rd_o[31:0]}   }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core   }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue   }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core   }
+gui_list_set_filter -id Data.1 -text {**}
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue   }
+gui_list_expand -id  Hier.1   tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile   }
+gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r17_q[31:0]}   }
+gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r17_q[31:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r18_q[31:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r19_q[31:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r20_q[31:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r21_q[31:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r22_q[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r17_q[31:0]} {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r18_q[31:0]} {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r19_q[31:0]} {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r20_q[31:0]} {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r21_q[31:0]} {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r22_q[31:0]} } -insertionbar
+gui_marker_move -id  Wave.1 C1 121916
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core   }
+gui_list_set_filter -id Data.1 -text {*pc*}
+gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_i_pc_o[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_i_pc_o[31:0]} } -insertionbar
+gui_marker_move -id  Wave.1 C1 108762
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 108000
+gui_wv_scroll_hslidermove -id  Wave.1 1677
+gui_wv_scroll_hslidermove -id  Wave.1 1869
+gui_zoom -window Wave.1 -factor 2
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r20_q[31:0]}   }
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 11227
+gui_wv_scroll_hslidermove -id  Wave.1 7110
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_i_pc_o[31:0]}   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after Group1 {{tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_i_pc_o[31:0]}}
+gui_list_set_filter -id Data.1 -text {*inst*}
+gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_i_inst_i[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_i_inst_i[31:0]} } -insertionbar
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  page
+gui_marker_move -id  Wave.1 C1 160000
+gui_marker_move -id  Wave.1 C1 162551
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  page
+gui_marker_move -id  Wave.1 C1 201118
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 208128
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r18_q[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]}   }
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
 gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_wr_o[31:0]}   }
-gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.axi_awaddr_o[31:0]}   }
-gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.axi_wdata_o[31:0]}   }
-gui_wv_scroll_hslidermove -id  Wave.1 7005
-gui_wv_scroll_hslidermove -id  Wave.1 8296
-gui_wv_scroll_hslidermove -id  Wave.1 9587
-gui_wv_scroll_hslidermove -id  Wave.1 10878
-gui_wv_scroll_hslidermove -id  Wave.1 12169
-gui_wv_scroll_hslidermove -id  Wave.1 13460
-gui_wv_scroll_hslidermove -id  Wave.1 14751
-gui_wv_scroll_hslidermove -id  Wave.1 16042
-gui_wv_scroll_hslidermove -id  Wave.1 18624
-gui_wv_scroll_hslidermove -id  Wave.1 19915
-gui_wv_scroll_hslidermove -id  Wave.1 23788
-gui_wv_scroll_hslidermove -id  Wave.1 25079
-gui_wv_scroll_hslidermove -id  Wave.1 26370
-gui_wv_scroll_hslidermove -id  Wave.1 27661
-gui_wv_scroll_hslidermove -id  Wave.1 31534
-gui_wv_scroll_hslidermove -id  Wave.1 26370
-gui_wv_scroll_hslidermove -id  Wave.1 25079
-gui_wv_scroll_hslidermove -id  Wave.1 22497
-gui_wv_scroll_hslidermove -id  Wave.1 18624
-gui_wv_scroll_hslidermove -id  Wave.1 17333
-gui_wv_scroll_hslidermove -id  Wave.1 14751
-gui_wv_scroll_hslidermove -id  Wave.1 12169
-gui_wv_scroll_hslidermove -id  Wave.1 9587
-gui_wv_scroll_hslidermove -id  Wave.1 7005
-gui_wv_scroll_hslidermove -id  Wave.1 5714
-gui_wv_scroll_hslidermove -id  Wave.1 1841
-gui_wv_scroll_hslidermove -id  Wave.1 550
-gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_wv_scroll_hslidermove -id  Wave.1 1291
-gui_wv_scroll_hslidermove -id  Wave.1 2582
-gui_wv_scroll_hslidermove -id  Wave.1 3873
-gui_wv_scroll_hslidermove -id  Wave.1 5164
-gui_wv_scroll_hslidermove -id  Wave.1 6455
-gui_wv_scroll_hslidermove -id  Wave.1 5164
-gui_wv_scroll_hslidermove -id  Wave.1 1291
-gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_wv_scroll_hslidermove -id  Wave.1 1291
-gui_wv_scroll_hslidermove -id  Wave.1 2582
-gui_wv_scroll_hslidermove -id  Wave.1 3873
-gui_wv_scroll_hslidermove -id  Wave.1 5164
-gui_wv_scroll_hslidermove -id  Wave.1 6455
-gui_wv_scroll_hslidermove -id  Wave.1 7746
-gui_wv_scroll_hslidermove -id  Wave.1 6455
-gui_marker_move -id  Wave.1 C1 280236
-gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.axi_awaddr_o[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r20_q[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_wr_o[31:0]}   }
+gui_marker_move -id  Wave.1 C1 198316
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_wr_o[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_addr_i[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_data_wr_i[31:0]}   }
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.clk_i   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_i_inst_i[31:0]} {{tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.clk_i}} 
+gui_list_select -id Wave.1 -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.clk_i  {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_wr_o[31:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_addr_i[31:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_data_wr_i[31:0]}   }
+gui_sg_create  Group2 
+gui_list_add_group -id  Wave.1   {Group2} 
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after Group2 {{tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.clk_i} {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]} {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_wr_o[31:0]} {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_addr_i[31:0]} {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_data_wr_i[31:0]}}
+gui_marker_move -id  Wave.1 C1 197986
+gui_marker_move -id  Wave.1 C1 199870
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_wr_o[31:0]}   }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC   }
+gui_list_set_filter -id Data.1 -text {*data*}
+gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.dport_axi_data_rd_w[31:0]}   }
+gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.dport_axi_data_rd_w[31:0]}  {tb_tcm_riscv_top.UUT_RISCV_SOC.dport_tcm_data_wr_w[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.dport_axi_data_rd_w[31:0]} {tb_tcm_riscv_top.UUT_RISCV_SOC.dport_tcm_data_wr_w[31:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.dport_axi_data_rd_w[31:0]}   }
+gui_delete_selected -id  Wave.1
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.dport_tcm_data_wr_w[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_wr_o[31:0]}   }
+gui_list_select -id Data.1 -selected  {  }
+gui_list_set_filter -id Data.1 -text {*mem_d*}
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm   }
+gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_wr_i[3:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_wr_i[3:0]} } -insertionbar
+gui_marker_move -id  Wave.1 C1 198571
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r20_q[31:0]}   }
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 194265
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  page
+gui_marker_move -id  Wave.1 C1 163000
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r17_q[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.dport_tcm_data_wr_w[31:0]}   }
+gui_marker_move -id  Wave.1 C1 199000
+gui_marker_move -id  Wave.1 C1 198479
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_wr_i[3:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_wr_o[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_wr_o[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_addr_i[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_data_wr_i[31:0]}   }
+gui_marker_move -id  Wave.1 C1 199000
+gui_marker_move -id  Wave.1 C1 198000
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.dport_tcm_data_wr_w[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_addr_i[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r17_q[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r18_q[31:0]}   }
+gui_marker_move -id  Wave.1 C1 197755
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r20_q[31:0]}   }
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_marker_move -id  Wave.1 C1 198000
+gui_scroll -window Wave.1 -hrel .2
+gui_marker_move -id  Wave.1 C1 198394
+gui_marker_move -id  Wave.1 C1 198202
 gui_list_select -id Wave.1 -selected  { {New Group}   }
+gui_list_action -id  Wave.1 {New Group}
 gui_list_set_insertion_bar -id Wave.1 -group {New Group} -pos in
-gui_sg_create Group2
-gui_list_add_group -id Wave.1 {{Group2}} -after {New Group}
+gui_sg_create Group3
+gui_list_add_group -id Wave.1 {{Group3}} -after {New Group}
 gui_list_select -id Wave.1 -selected  {  }
-gui_list_select -id Wave.1 -selected  { Group2   }
-gui_list_select -id Wave.1 -selected  { {New Group}   }
-gui_list_select -id Wave.1 -selected  { Group2   }
-gui_list_set_filter -id Data.1 -text {*addr*}
-gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.axi_awaddr_o[31:0]}   }
-gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.axi_awaddr_o[31:0]} } -insertionbar
-gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.mem_addr_i[31:0]}   }
-gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.mem_addr_i[31:0]} } -insertionbar
-gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.mem_addr_i[31:0]}   }
-gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_dcache.axi_awaddr_o[31:0]}   }
-gui_marker_move -id  Wave.1 C1 287313
+gui_list_select -id Wave.1 -selected  { Group3   }
+gui_list_select -id Wave.1 -selected  {  }
+gui_marker_move -id  Wave.1 C1 199000
+gui_marker_move -id  Wave.1 C1 198000
+gui_marker_move -id  Wave.1 C1 199000
+gui_marker_move -id  Wave.1 C1 199884
+gui_marker_move -id  Wave.1 C1 199650
+gui_marker_move -id  Wave.1 C1 200586
+gui_marker_move -id  Wave.1 C1 201246
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]}   }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core   }
+gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_rd_i[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_rd_i[31:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_rd_i[31:0]}   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]} {{tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_rd_i[31:0]}} 
+gui_marker_move -id  Wave.1 C1 201000
+gui_marker_move -id  Wave.1 C1 200501
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_rd_i[31:0]}   }
+gui_save_session -reload -default_file
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r20_q[31:0]}   }
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_save_session -reload -default_file
+gui_marker_move -id  Wave.1 C1 192753
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_wr_o[31:0]}   }
+gui_marker_move -id  Wave.1 C1 199000
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]}   }
+gui_marker_move -id  Wave.1 C1 204000
+gui_marker_move -id  Wave.1 C1 204000
+gui_marker_move -id  Wave.1 C1 204354
+gui_marker_move -id  Wave.1 C1 199000
+gui_marker_move -id  Wave.1 C1 201000
+gui_marker_move -id  Wave.1 C1 203000
+gui_marker_move -id  Wave.1 C1 199000
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_addr_i[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_data_wr_i[31:0]}   }
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]}   }
+gui_marker_move -id  Wave.1 C1 204000
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_data_rd_i[31:0]}   }
+gui_marker_move -id  Wave.1 C1 206000
+gui_marker_move -id  Wave.1 C1 198500
+gui_marker_move -id  Wave.1 C1 205000
+gui_marker_move -id  Wave.1 C1 205545
+gui_marker_move -id  Wave.1 C1 205000
+gui_marker_move -id  Wave.1 C1 208000
+gui_marker_move -id  Wave.1 C1 207000
+gui_marker_move -id  Wave.1 C1 204460
+gui_marker_move -id  Wave.1 C1 206000
+gui_marker_move -id  Wave.1 C1 204000
+gui_marker_move -id  Wave.1 C1 201693
+gui_marker_move -id  Wave.1 C1 203545
+gui_marker_move -id  Wave.1 C1 204311
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_addr_i[31:0]}   }
+gui_marker_move -id  Wave.1 C1 201544
+gui_marker_move -id  Wave.1 C1 204000
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r20_q[31:0]}   }
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_marker_move -id  Wave.1 C1 205162
+gui_marker_move -id  Wave.1 C1 204205
+gui_marker_move -id  Wave.1 C1 205333
+gui_save_session -reload -default_file
+gui_marker_move -id  Wave.1 C1 198969
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 33680
+gui_wv_scroll_hslidermove -id  Wave.1 33680
+gui_marker_move -id  Wave.1 C1 720016
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 660142
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 664536
+gui_marker_move -id  Wave.1 C1 657895
+gui_wv_scroll_hslidermove -id  Wave.1 13758
+gui_wv_scroll_hslidermove -id  Wave.1 12465
+gui_wv_scroll_hslidermove -id  Wave.1 8586
+gui_wv_scroll_hslidermove -id  Wave.1 9879
+gui_wv_scroll_hslidermove -id  Wave.1 11172
+gui_wv_scroll_hslidermove -id  Wave.1 12465
+gui_marker_move -id  Wave.1 C1 549176
+gui_marker_move -id  Wave.1 C1 550155
+gui_marker_move -id  Wave.1 C1 552794
+gui_marker_move -id  Wave.1 C1 564670
+gui_wv_scroll_hslidermove -id  Wave.1 13758
+gui_wv_scroll_hslidermove -id  Wave.1 12465
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scroll_hslidermove -id  Wave.1 7202
+gui_wv_scroll_hslidermove -id  Wave.1 5909
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_wv_scroll_hslidermove -id  Wave.1 27099
+gui_marker_move -id  Wave.1 C1 581027
+gui_marker_move -id  Wave.1 C1 581496
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_marker_move -id  Wave.1 C1 587000
+gui_marker_move -id  Wave.1 C1 588000
+gui_marker_move -id  Wave.1 C1 587000
+gui_marker_move -id  Wave.1 C1 581666
+gui_marker_move -id  Wave.1 C1 585093
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.dport_tcm_data_wr_w[31:0]}   }
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_save_session -reload -default_file
+gui_marker_move -id  Wave.1 C1 586668
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 1489
+gui_wv_scrollleft -id  Wave.1  page
+gui_marker_move -id  Wave.1 C1 197004
+gui_marker_move -id  Wave.1 C1 214201
+gui_wv_scroll_hslidermove -id  Wave.1 1489
+gui_wv_scroll_hslidermove -id  Wave.1 196
+gui_marker_move -id  Wave.1 C1 208923
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 210000
+gui_zoom -window Wave.1 -factor 2
+gui_wv_scroll_hslidermove -id  Wave.1 3698
+gui_wv_scroll_hslidermove -id  Wave.1 3890
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 209000
+gui_wv_scroll_hslidermove -id  Wave.1 7530
+gui_wv_scroll_hslidermove -id  Wave.1 6237
+gui_wv_scroll_hslidermove -id  Wave.1 7530
+gui_wv_scroll_hslidermove -id  Wave.1 6237
+gui_wv_scroll_hslidermove -id  Wave.1 7530
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r19_q[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r20_q[31:0]}   }
+gui_marker_move -id  Wave.1 C1 164871
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 209000
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 209000
+gui_marker_move -id  Wave.1 C1 209504
+gui_marker_move -id  Wave.1 C1 210000
+gui_marker_move -id  Wave.1 C1 210547
+gui_marker_move -id  Wave.1 C1 210441
+gui_marker_move -id  Wave.1 C1 211000
+gui_marker_move -id  Wave.1 C1 211000
+gui_marker_move -id  Wave.1 C1 211505
+gui_marker_move -id  Wave.1 C1 211000
+gui_marker_move -id  Wave.1 C1 216379
+gui_marker_move -id  Wave.1 C1 218210
+gui_marker_move -id  Wave.1 C1 210356
+gui_marker_move -id  Wave.1 C1 212186
+gui_marker_move -id  Wave.1 C1 214379
+gui_marker_move -id  Wave.1 C1 215500
+gui_wv_zoom_timerange -id  Wave.1 214549 214655
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_data_wr_i[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r18_q[31:0]}   }
+gui_link_wave_window -link -id Wave.1
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 17754
+gui_wv_scroll_hslidermove -id  Wave.1 17754
+gui_wv_scroll_hslidermove -id  Wave.1 17754
+gui_wv_scroll_hslidermove -id  Wave.1 17754
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_save_session -reload -default_file
+gui_marker_move -id  Wave.1 C1 223286
+gui_marker_move -id  Wave.1 C1 221030
+gui_marker_move -id  Wave.1 C1 219238
+gui_marker_move -id  Wave.1 C1 222886
+gui_save_session -reload -default_file
+gui_save_session -reload -default_file
+gui_marker_move -id  Wave.1 C1 221557
+gui_marker_move -id  Wave.1 C1 221500
+gui_marker_move -id  Wave.1 C1 221500
+gui_marker_move -id  Wave.1 C1 221304
+gui_marker_move -id  Wave.1 C1 216138
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_addr_i[31:0]}   }
+gui_marker_move -id  Wave.1 C1 212000
+gui_marker_move -id  Wave.1 C1 214514
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r18_q[31:0]}   }
+gui_set_pref_value -category {Schematics} -key {highlight_color} -value {Yellow}
+gui_highlight_signals -color_id 3 {{tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r18_q[31:0]}} 
+gui_list_select -id Wave.1 -selected  {  }
+gui_marker_move -id  Wave.1 C1 215653
+gui_marker_move -id  Wave.1 C1 218837
+gui_marker_move -id  Wave.1 C1 220714
+gui_marker_move -id  Wave.1 C1 222822
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 5666
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r18_q[31:0]}   }
+gui_save_session -reload -default_file
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r20_q[31:0]}   }
+gui_marker_move -id  Wave.1 C1 219828
+gui_marker_move -id  Wave.1 C1 219000
+gui_marker_move -id  Wave.1 C1 219976
+gui_marker_move -id  Wave.1 C1 222253
+gui_marker_move -id  Wave.1 C1 224931
+gui_marker_move -id  Wave.1 C1 226808
+gui_marker_move -id  Wave.1 C1 219000
+gui_marker_move -id  Wave.1 C1 220250
+gui_marker_move -id  Wave.1 C1 221895
+gui_marker_move -id  Wave.1 C1 225015
+gui_marker_move -id  Wave.1 C1 227757
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_marker_move -id  Wave.1 C1 522442
+gui_marker_move -id  Wave.1 C1 531741
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_marker_move -id  Wave.1 C1 115000
+gui_marker_move -id  Wave.1 C1 118000
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r18_q[31:0]}   }
+gui_marker_move -id  Wave.1 C1 133731
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 146000
+gui_marker_move -id  Wave.1 C1 147000
+gui_marker_move -id  Wave.1 C1 148000
+gui_marker_move -id  Wave.1 C1 150000
+gui_marker_move -id  Wave.1 C1 152245
+gui_marker_move -id  Wave.1 C1 154000
+gui_marker_move -id  Wave.1 C1 156000
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_marker_move -id  Wave.1 C1 198235
+gui_marker_move -id  Wave.1 C1 191593
+gui_marker_move -id  Wave.1 C1 195810
+gui_marker_move -id  Wave.1 C1 197000
+gui_marker_move -id  Wave.1 C1 198277
+gui_marker_move -id  Wave.1 C1 201525
+gui_marker_move -id  Wave.1 C1 205911
+gui_marker_move -id  Wave.1 C1 198277
+gui_marker_move -id  Wave.1 C1 202642
+gui_save_session -reload -default_file
+gui_marker_move -id  Wave.1 C1 200787
+gui_marker_move -id  Wave.1 C1 202157
+gui_marker_move -id  Wave.1 C1 198383
+gui_marker_move -id  Wave.1 C1 204730
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 204000
+gui_marker_move -id  Wave.1 C1 203486
+gui_marker_move -id  Wave.1 C1 202000
+gui_marker_move -id  Wave.1 C1 204000
+gui_marker_move -id  Wave.1 C1 203000
+gui_wv_scrollright -id  Wave.1  page
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_wr_i[3:0]}   }
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_save_session -reload -default_file
+gui_marker_move -id  Wave.1 C1 717114
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_wv_scrollleft -id  Wave.1  page
+gui_marker_move -id  Wave.1 C1 215000
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 209000
+gui_marker_move -id  Wave.1 C1 212000
+gui_marker_move -id  Wave.1 C1 215000
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.dport_tcm_data_wr_w[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_addr_i[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_data_wr_i[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_addr_i[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.mem_d_data_wr_i[31:0]}   }
+gui_list_expand -id  Hier.1   tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm   }
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.u_ram -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.u_ram   }
+gui_list_set_filter -id Data.1 -text {*}
+gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.u_ram.ram[16383:0][31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.u_ram.ram[16383:0][31:0]} } -insertionbar
+gui_list_select -id Data.1 -selected  {  }
+gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.u_ram.ram_read1_q[31:0]}   }
+gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.u_ram.ram_read0_q[31:0]}   }
+gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.u_ram.ram_read1_q[31:0]}   }
+gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.u_ram.ram[16383:0][31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.u_ram.ram[16383:0][31:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r18_q[31:0]}   }
+gui_marker_move -id  Wave.1 C1 219000
+gui_marker_move -id  Wave.1 C1 219000
+gui_marker_move -id  Wave.1 C1 219723
+gui_marker_move -id  Wave.1 C1 224804
+gui_marker_move -id  Wave.1 C1 230160
+gui_marker_move -id  Wave.1 C1 226787
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_i_pc_o[31:0]}   }
+gui_marker_move -id  Wave.1 C1 214000
+gui_marker_move -id  Wave.1 C1 224952
+gui_marker_move -id  Wave.1 C1 228284
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 27953
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 7555
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_tcm.u_ram -current_item_type Scope  -selected  {  }
+gui_save_session -reload -default_file
+gui_marker_move -id  Wave.1 C1 165467
+gui_marker_move -id  Wave.1 C1 162831
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 160575
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_marker_move -id  Wave.1 C1 222000
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_save_session -reload -default_file
+gui_marker_move -id  Wave.1 C1 224404
+gui_marker_move -id  Wave.1 C1 226000
+gui_marker_move -id  Wave.1 C1 226000
+gui_marker_move -id  Wave.1 C1 228474
+gui_marker_move -id  Wave.1 C1 230000
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r22_q[31:0]}   }
+gui_list_expand -id  Hier.1   tb_tcm_riscv_top
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC   }
+gui_list_expand -id  Hier.1   tb_tcm_riscv_top.UUT_RISCV_SOC
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core   }
+gui_list_expand -id  Hier.1   tb_tcm_riscv_top.UUT_RISCV_SOC.u_core
+gui_list_expand -id  Hier.1   tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile -current_item_type Scope  -selected  { tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile   }
+gui_list_select -id Data.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r23_q[31:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r23_q[31:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r23_q[31:0]}   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r22_q[31:0]} {{tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r23_q[31:0]}} 
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.mem_d_addr_o[31:0]}   }
+gui_save_session -reload -default_file
+gui_marker_move -id  Wave.1 C1 222000
+gui_marker_move -id  Wave.1 C1 226000
+gui_marker_move -id  Wave.1 C1 230920
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 5666
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r19_q[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile.REGFILE.reg_r20_q[31:0]}   }
+gui_marker_move -id  Wave.1 C1 219006
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_list_select -id Hier.1 -current_item_name tb_tcm_riscv_top.UUT_RISCV_SOC.u_core.u_issue.u_regfile -current_item_type Scope  -selected  {  }
+gui_save_session -reload -default_file
+gui_marker_move -id  Wave.1 C1 221410
+gui_marker_move -id  Wave.1 C1 220250

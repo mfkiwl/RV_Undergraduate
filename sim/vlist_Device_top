@@ -56,9 +56,9 @@
 ../rtl/top_src/tcm_src_v/tcm_mem.v
 
 // top
-//../rtl/top_src/tcm_src_v/riscv_tcm_top.v
+../rtl/top_src/tcm_src_v/riscv_tcm_top.v
 //../rtl/top_src/tcm_src_v/riscv_tcm_w_cache_top.v
-../rtl/top_src/tcm_src_v/riscv_decoupled_tcm.v
+//../rtl/top_src/tcm_src_v/riscv_decoupled_tcm.v
 
 
 

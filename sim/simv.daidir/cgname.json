@@ -1,32 +1,12 @@
 {
-    "riscv_csr": [
-        "riscv_csr",
-        "TEvF4",
-        "module"
-    ],
-    "std": [
-        "std",
-        "reYIK",
-        "module"
-    ],
     "riscv_fetch": [
         "riscv_fetch",
         "ucxdY",
         "module"
     ],
-    "riscv_divider": [
-        "riscv_divider",
-        "CJAps",
-        "module"
-    ],
-    "riscv_trace_sim": [
-        "riscv_trace_sim",
-        "Qacj7",
-        "module"
-    ],
-    "dport_axi": [
-        "dport_axi",
-        "Mvsdu",
+    "std": [
+        "std",
+        "reYIK",
         "module"
     ],
     "tb_tcm_riscv_top": [
@@ -39,19 +19,44 @@
         "fDyH7",
         "module"
     ],
+    "dcache": [
+        "dcache",
+        "W975R",
+        "module"
+    ],
     "icache": [
         "icache",
         "sbRVE",
         "module"
     ],
-    "riscv_core": [
-        "riscv_core",
-        "yiGEQ",
+    "riscv_multiplier": [
+        "riscv_multiplier",
+        "FBcGz",
+        "module"
+    ],
+    "riscv_csr": [
+        "riscv_csr",
+        "TEvF4",
+        "module"
+    ],
+    "dport_mux": [
+        "dport_mux",
+        "aaYnL",
+        "module"
+    ],
+    "dport_axi": [
+        "dport_axi",
+        "Mvsdu",
         "module"
     ],
     "riscv_decode_0000": [
         "riscv_decode_0000",
         "Y6SGY",
+        "module"
+    ],
+    "riscv_divider": [
+        "riscv_divider",
+        "CJAps",
         "module"
     ],
     "riscv_lsu": [
@@ -64,19 +69,9 @@
         "WT7Yr",
         "module"
     ],
-    "riscv_multiplier": [
-        "riscv_multiplier",
-        "FBcGz",
-        "module"
-    ],
-    "dport_mux": [
-        "dport_mux",
-        "aaYnL",
-        "module"
-    ],
-    "tcm_mem": [
-        "tcm_mem",
-        "DBb1S",
+    "riscv_trace_sim": [
+        "riscv_trace_sim",
+        "Qacj7",
         "module"
     ],
     "...MASTER...": [

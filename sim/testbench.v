@@ -32,7 +32,7 @@ endtask
 //------------------------------------------------
 //Test Input Trace
 //------------------------------------------------
-parameter TRACE_SIZE = 30;
+parameter TRACE_SIZE = 100;
 
 integer               file_decsriptor; // file handler
 integer               file_io; // file handler
@@ -50,7 +50,8 @@ initial begin
     $finish;
   end
   for( i =0; i< TRACE_SIZE; i=i+1) begin
-  file_io = $fscanf(file_decsriptor,"%x, %x\n", in_addr[i], in_inst[i]); 
+  file_io = $fscanf(file_decsriptor,"%x: %x\n", in_addr[i], in_inst[i]); 
+  // file_io = $fscanf(file_decsriptor,"%x, %x\n", in_addr[i], in_inst[i]); 
   end
    $display ("File Read Done!");
 end

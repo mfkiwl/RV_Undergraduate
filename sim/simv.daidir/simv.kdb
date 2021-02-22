@@ -6,4 +6,4 @@ SystemC=FALSE
 UUM=FALSE
 KDB=FALSE
 USE_NOVAS_HOME=FALSE
-TOP=tb_tcm_riscv_top riscv_trace_sim dport_axi 
+TOP=tb_tcm_riscv_top dcache icache riscv_trace_sim 

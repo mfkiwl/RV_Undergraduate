@@ -9,7 +9,7 @@ Command: vcs +define+WAVE_DUMP_VCS+RTL_SIM +libext+.v -full64 -v2005 -R -timesca
 +define+VCS -l vcs.log -debug_all -sverilog -file vlist_Device_top -ucli -do dump.tcl \
 +vpdfile+dump/Dev_top_test.vpd
                          Chronologic VCS (TM)
-       Version K-2015.09-SP1_Full64 -- Fri Feb 19 21:07:13 2021
+       Version K-2015.09-SP1_Full64 -- Mon Feb 22 21:44:00 2021
                Copyright (c) 1991-2015 by Synopsys Inc.
                          ALL RIGHTS RESERVED
 
@@ -240,37 +240,17 @@ Parsing design file '../rtl/top_src/tcm_src_v/dport_mux.v'
 Parsing design file '../rtl/top_src/tcm_src_v/tcm_mem_pmem.v'
 Parsing design file '../rtl/top_src/tcm_src_v/tcm_mem_ram.v'
 Parsing design file '../rtl/top_src/tcm_src_v/tcm_mem.v'
-Parsing design file '../rtl/top_src/tcm_src_v/riscv_decoupled_tcm.v'
-
-Warning-[IPDW] Identifier previously declared
-../rtl/top_src/tcm_src_v/riscv_decoupled_tcm.v, 184
-  Second declaration for identifier 'cpu_id_w' ignored
-
+Parsing design file '../rtl/top_src/tcm_src_v/riscv_tcm_top.v'
 Top Level Modules:
        tb_tcm_riscv_top
+       dcache
+       icache
        riscv_trace_sim
-       dport_axi
 TimeScale is 1 ns / 10 ps
 
 Warning-[TFIPC] Too few instance port connections
-../rtl/top_src/tcm_src_v/riscv_decoupled_tcm.v, 312
-"dport_mux #(.TCM_MEM_BASE(TCM_MEM_BASE)) u_dmux( .clk_i (clk_i),  .rst_i (rst_i),  .mem_addr_i (dport_addr_w),  .mem_data_wr_i (dport_data_wr_w),  .mem_rd_i (dport_rd_w),  .mem_wr_i (dport_wr_w),  .mem_cacheable_i (dport_cacheable_w),  .mem_req_tag_i (dport_req_tag_w),  .mem_invalidate_i (dport_invalidate_w),  .mem_writeback_i (dport_writeback_w),  .mem_flush_i (dport_flush_w),  .mem_tcm_data_rd_i (dcache_data_rd_w),  .mem_tcm_accept_i (dcache_accept_w),  .mem_tcm_ack_i (dcache_ack_w),  .mem_tcm_error_i (dcache_error_w),  .mem_tcm_resp_tag_i (dcache_resp_tag_w),  .mem_data_rd_o (dport_data_rd_w),  .mem_accept_o (dport_accept_w),  .mem_ack_o (dport_ack_w),  .mem_error_o (dport_error_w),  .mem_resp_tag_o (dport_resp_tag_w),  .mem_tcm_addr_o (dcache_addr_w ... "
-  The above instance has fewer port connections than the module definition.
-  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
-  ports.
-
-
-Warning-[TFIPC] Too few instance port connections
-../rtl/top_src/tcm_src_v/riscv_decoupled_tcm.v, 479
-"tcm_mem u_tcm_i( .clk_i (clk_i),  .rst_i (rst_i),  .axi_awvalid_i (AXI_ic_awvalid),  .axi_awaddr_i (AXI_ic_awaddr),  .axi_awid_i (AXI_ic_awid),  .axi_awlen_i (AXI_ic_awlen),  .axi_awburst_i (AXI_ic_awburst),  .axi_wvalid_i (AXI_ic_wvalid),  .axi_wdata_i (AXI_ic_wdata),  .axi_wstrb_i (AXI_ic_wstrb),  .axi_wlast_i (AXI_ic_wlast),  .axi_bready_i (AXI_ic_bready),  .axi_arvalid_i (AXI_ic_arvalid),  .axi_araddr_i (AXI_ic_araddr),  .axi_arid_i (AXI_ic_arid),  .axi_arlen_i (AXI_ic_arlen),  .axi_arburst_i (AXI_ic_arburst),  .axi_rready_i (AXI_ic_rready),  .axi_awready_o (AXI_ic_awready),  .axi_wready_o (AXI_ic_wready),  .axi_bvalid_o (AXI_ic_bvalid),  .axi_bresp_o (AXI_ic_bresp),  .axi_bid_o (AXI_ic_bid),  .axi_arready_o (AXI_ic_arready),  .axi_rvalid_o (AXI_ic_ ... "
-  The above instance has fewer port connections than the module definition.
-  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
-  ports.
-
-
-Warning-[TFIPC] Too few instance port connections
-../rtl/top_src/tcm_src_v/riscv_decoupled_tcm.v, 527
-"tcm_mem u_tcm_d( .clk_i (clk_i),  .rst_i (rst_i),  .axi_awvalid_i (AXI_dc_awvalid),  .axi_awaddr_i (AXI_dc_awaddr),  .axi_awid_i (AXI_dc_awid),  .axi_awlen_i (AXI_dc_awlen),  .axi_awburst_i (AXI_dc_awburst),  .axi_wvalid_i (AXI_dc_wvalid),  .axi_wdata_i (AXI_dc_wdata),  .axi_wstrb_i (AXI_dc_wstrb),  .axi_wlast_i (AXI_dc_wlast),  .axi_bready_i (AXI_dc_bready),  .axi_arvalid_i (AXI_dc_arvalid),  .axi_araddr_i (AXI_dc_araddr),  .axi_arid_i (AXI_dc_arid),  .axi_arlen_i (AXI_dc_arlen),  .axi_arburst_i (AXI_dc_arburst),  .axi_rready_i (AXI_dc_rready),  .axi_awready_o (AXI_dc_awready),  .axi_wready_o (AXI_dc_wready),  .axi_bvalid_o (AXI_dc_bvalid),  .axi_bresp_o (AXI_dc_bresp),  .axi_bid_o (AXI_dc_bid),  .axi_arready_o (AXI_dc_arready),  .axi_rvalid_o (AXI_dc_ ... "
+../rtl/top_src/tcm_src_v/riscv_tcm_top.v, 275
+"tcm_mem u_tcm( .clk_i (clk_i),  .rst_i (rst_i),  .mem_i_rd_i (ifetch_rd_w),  .mem_i_flush_i (ifetch_flush_w),  .mem_i_invalidate_i (ifetch_invalidate_w),  .mem_i_pc_i (ifetch_pc_w),  .mem_d_addr_i (dport_tcm_addr_w),  .mem_d_data_wr_i (dport_tcm_data_wr_w),  .mem_d_rd_i (dport_tcm_rd_w),  .mem_d_wr_i (dport_tcm_wr_w),  .mem_d_cacheable_i (dport_tcm_cacheable_w),  .mem_d_req_tag_i (dport_tcm_req_tag_w),  .mem_d_invalidate_i (dport_tcm_invalidate_w),  .mem_d_writeback_i (dport_tcm_writeback_w),  .mem_d_flush_i (dport_tcm_flush_w),  .axi_awvalid_i (axi_t_awvalid_i),  .axi_awaddr_i (axi_t_awaddr_i),  .axi_awid_i (axi_t_awid_i),  .axi_awlen_i (axi_t_awlen_i),  .axi_awburst_i (axi_t_awburst_i),  .axi_wvalid_i (axi_t_wvalid_i),  .axi_wdata_i (axi_t_wdata_i),   ... "
   The above instance has fewer port connections than the module definition.
   Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
   ports.
@@ -284,27 +264,16 @@ Warning-[PCWM-W] Port connection width mismatch
   Expression: AXI_ID
   	use +lint=PCWM for more details
 
-
-Warning-[PCWM-W] Port connection width mismatch
-../rtl/top_src/tcm_src_v/riscv_decoupled_tcm.v, 272
-"riscv_core #(, , , , , , , MEM_CACHE_ADDR_MIN, MEM_CACHE_ADDR_MAX) u_core( .clk_i (clk_i),  .rst_i (rst_i),  .mem_d_data_rd_i (dport_data_rd_w),  .mem_d_accept_i (dport_accept_w),  .mem_d_ack_i (dport_ack_w),  .mem_d_error_i (dport_error_w),  .mem_d_resp_tag_i (dport_resp_tag_w),  .mem_i_accept_i (icache_accept_w),  .mem_i_valid_i (icache_valid_w),  .mem_i_error_i (icache_error_w),  .mem_i_inst_i (icache_inst_w),  .intr_i (intr_i),  .reset_vector_i (boot_vector_w),  .cpu_id_i (cpu_id_w),  .mem_d_addr_o (dport_addr_w),  .mem_d_data_wr_o (dport_data_wr_w),  .mem_d_rd_o (dport_rd_w),  .mem_d_wr_o (dport_wr_w),  .mem_d_cacheable_o (dport_cacheable_w),  .mem_d_req_tag_o (dport_req_tag_w),  .mem_d_invalidate_o (dport_invalidate_w),  .mem_d_writeback_o (dport_ ... "
-  The following 32-bit expression is connected to 1-bit port "intr_i" of 
-  module "riscv_core", instance "u_core".
-  Expression: intr_i
-  	use +lint=PCWM for more details
-
 Starting vcs inline pass...
-16 modules and 0 UDP read.
-	However, due to incremental compilation, only 1 module needs to be compiled.
-recompiling module tb_tcm_riscv_top because:
-	This module or some inlined child module(s) has/have been modified.
+15 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
 make[1]: Entering directory `/home/uho/workspace/RISCV_RTL_SIM/sim/csrc'
 rm -f _csrc*.so linux64_scvhdl_*.so pre_vcsobj_*.so share_vcsobj_*.so
 if [ -x ../simv ]; then chmod -x ../simv; fi
 g++  -o ../simv   -Wl,-rpath-link=./ -Wl,-rpath='$ORIGIN'/simv.daidir/ -Wl,-rpath=./simv.daidir/ \
 -Wl,-rpath='$ORIGIN'/simv.daidir//scsim.db.dir  -rdynamic   amcQwB.o objs/amcQw_d.o \
-_30898_archive_1.so _prev_archive_1.so  SIM_l.o       rmapats_mop.o rmapats.o rmar.o \
-rmar_llvm_0_1.o rmar_llvm_0_0.o          /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libzerosoft_rt_stubs.so \
+_prev_archive_1.so  SIM_l.o       rmapats_mop.o rmapats.o rmar.o  rmar_llvm_0_1.o \
+rmar_llvm_0_0.o          /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libzerosoft_rt_stubs.so \
 /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libvirsim.so /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/liberrorinf.so \
 /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libsnpsmalloc.so    /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libvcsnew.so \
 /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libsimprofile.so /usr/synopsys/vcs_vK-2015.09-SP1/linux64/lib/libuclinative.so \
@@ -316,7 +285,7 @@ make[1]: Leaving directory `/home/uho/workspace/RISCV_RTL_SIM/sim/csrc'
 Command: ./simv +define+WAVE_DUMP_VCS+RTL_SIM +libext+.v +define+VCS -a vcs.log -ucli -do dump.tcl +vpdfile+dump/Dev_top_test.vpd
 Chronologic VCS simulator copyright 1991-2015
 Contains Synopsys proprietary information.
-Compiler version K-2015.09-SP1_Full64; Runtime version K-2015.09-SP1_Full64;  Feb 19 21:07 2021
+Compiler version K-2015.09-SP1_Full64; Runtime version K-2015.09-SP1_Full64;  Feb 22 21:44 2021
 Message: From $vcdpluson at time 0 in file ./testbench.v line 3: [VCD+-SVFN]: 
 Setting VPD File by "+vpdfile+" switch to dump/Dev_top_test.vpd.
 
@@ -333,6 +302,6 @@ Core reset
 ucli% exit
            V C S   S i m u l a t i o n   R e p o r t 
 Time: 100000000 ps
-CPU Time:      0.300 seconds;       Data structure size:   0.1Mb
-Fri Feb 19 21:07:15 2021
-CPU time: .973 seconds to compile + .274 seconds to elab + .082 seconds to link + .400 seconds in simulation
+CPU Time:      0.280 seconds;       Data structure size:   0.1Mb
+Mon Feb 22 21:44:02 2021
+CPU time: .848 seconds to compile + .275 seconds to elab + .082 seconds to link + .381 seconds in simulation

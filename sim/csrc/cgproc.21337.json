@@ -1,0 +1,31 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "riscv_fetch": {},
+        "std": {},
+        "tb_tcm_riscv_top": {},
+        "dcache_core_data_ram": {},
+        "dcache": {},
+        "icache": {},
+        "riscv_multiplier": {},
+        "riscv_csr": {},
+        "dport_mux": {},
+        "dport_axi": {},
+        "riscv_divider": {},
+        "riscv_decode_0000": {},
+        "riscv_lsu": {},
+        "riscv_mmu_0000": {},
+        "riscv_trace_sim": {}
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "bytes": 11871,
+            "mod": "...MASTER...",
+            "out": "objs/amcQw_d.o",
+            "mode": 4,
+            "checksum": 4294967295
+        }
+    },
+    "reusePaths": {},
+    "ObjArchives": []
+}
